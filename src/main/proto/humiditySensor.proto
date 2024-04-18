@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package com.example.grpc.humiditySensor;
+
+option java_multiple_files = true;
+option java_package = "com.example.grpc.humiditySensor";
+option java_outer_classname = "humidityProto";
+
+service HumiditySensorService{
+  // Unary RPC
+  rpc getCurrentHumidity (UnaryHumidityRequest) returns (UnaryHumidityResponse);
+
+  // Server-side streaming RPC
+  rpc streamCurrentHumidity(StreamHumidityRequest) returns (stream StreamHumidityResponse);
+}
+
+message UnaryHumidityRequest {
+  double humidity = 1;
+}
+
+message UnaryHumidityResponse {
+  string message = 1;
+}
+
+message StreamHumidityRequest {
+  double streamHumidity = 1;
+}
+
+message StreamHumidityResponse {
+  string message = 1;
+}
