@@ -1,7 +1,5 @@
 package com.example.grpc.humiditySensor;
 
-import io.grpc.stub.StreamObserver;
-
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
@@ -157,8 +155,6 @@ public final class HumiditySensorServiceGrpc {
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return HumiditySensorServiceGrpc.bindService(this);
     }
-
-    public abstract void streamCurrentHumidity(StreamHumidityRequest request, StreamObserver<StreamHumidityResponse> responseObserver);
   }
 
   /**
