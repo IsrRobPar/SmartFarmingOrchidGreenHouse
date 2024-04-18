@@ -18,7 +18,7 @@ public class HumiditySensorServer extends HumiditySensorServiceGrpc.HumiditySens
     @Override
     public void getCurrentHumidity(UnaryHumidityRequest request, StreamObserver<UnaryHumidityResponse> responseObserver) {
         double humidity = randomHumidity();
-        String message = "the Humidity is: " + humidity + "%. Current time: " + LocalDateTime.now();
+        String message = " is: " + humidity + "%. Current time: " + LocalDateTime.now();
         UnaryHumidityResponse response = UnaryHumidityResponse.newBuilder()
                 .setMessage(message)
                 .build();
@@ -32,7 +32,7 @@ public class HumiditySensorServer extends HumiditySensorServiceGrpc.HumiditySens
         Runnable streamingTask = () -> {
             try {
                 while (!Thread.currentThread().isInterrupted()) {
-                    String message = "The Humidity stream is: " + streamHumidity + ". Current time: " + LocalDateTime.now();
+                    String message = " is: " + streamHumidity + ". Current time: " + LocalDateTime.now();
                     StreamHumidityResponse response = StreamHumidityResponse.newBuilder()
                             .setMessage(message)
                             .build();
