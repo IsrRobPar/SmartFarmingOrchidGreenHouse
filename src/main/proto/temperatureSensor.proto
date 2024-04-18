@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package com.example.grpc.temperatureSensor;
+
+option java_multiple_files = true;
+option java_package = "com.example.grpc.temperatureSensor";
+option java_outer_classname = "temperatureProto";
+
+service TemperatureSensorService{
+  // Unary RPC
+  rpc getCurrentTemperature (UnaryTemperatureRequest) returns (UnaryTemperatureResponse);
+
+  // Server-side streaming RPC
+  rpc streamCurrentTemperature(StreamTemperatureRequest) returns (stream StreamTemperatureResponse);
+}
+
+message UnaryTemperatureRequest {
+  double temperature = 1;
+}
+
+message UnaryTemperatureResponse {
+  string message = 1;
+}
+
+message StreamTemperatureRequest {
+  double streamTemperature = 1;
+}
+
+message StreamTemperatureResponse {
+  string message = 1;
+}
