@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1bbd2568-0184-47c8-810c-e60558882b9f" name="Changes" comment="PROTO temperatureSensor.proto">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="1bbd2568-0184-47c8-810c-e60558882b9f" name="Changes" comment="SERVER HumidityServer">
       <change afterPath="$PROJECT_DIR$/src/main/java/TemperatureSensorServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GreenHouseClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GreenHouseClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HumiditySensorServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HumiditySensorServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/humiditySensor/HumiditySensorServiceGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/grpc/humiditySensor/HumiditySensorServiceGrpc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +71,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1713459055744</updated>
-      <workItem from="1713459056813" duration="5487000" />
+      <workItem from="1713459056813" duration="7048000" />
     </task>
     <task id="LOCAL-00001" summary="Pom">
       <option name="closed" value="true" />
@@ -117,7 +113,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713462446861</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="SERVER HumidityServer">
+      <option name="closed" value="true" />
+      <created>1713464652414</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1713464652414</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,17 +144,7 @@
     <MESSAGE value="SERVER humiditySensorServer" />
     <MESSAGE value="CLIENT humiditySensor" />
     <MESSAGE value="PROTO temperatureSensor.proto" />
-    <option name="LAST_COMMIT_MESSAGE" value="PROTO temperatureSensor.proto" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/TemperatureSensorServer.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="SERVER HumidityServer" />
+    <option name="LAST_COMMIT_MESSAGE" value="SERVER HumidityServer" />
   </component>
 </project>
