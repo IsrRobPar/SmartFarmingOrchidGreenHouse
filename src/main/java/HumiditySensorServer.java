@@ -12,7 +12,8 @@ import java.time.LocalDateTime;
 import java.util.Properties;
 import java.util.Random;
 
-public class HumiditySensorServer{
+public class HumiditySensorServer {
+
     private Server server;
 
     private void start() throws IOException {
