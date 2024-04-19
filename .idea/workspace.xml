@@ -4,27 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1bbd2568-0184-47c8-810c-e60558882b9f" name="Changes" comment="PROTO fanStatus.proto">
-      <change afterPath="$PROJECT_DIR$/src/main/java/FanStatusServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1bbd2568-0184-47c8-810c-e60558882b9f" name="Changes" comment="FAN Update (SERVER)">
+      <change beforePath="$PROJECT_DIR$/src/main/java/FanStatusServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FanStatusServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GreenHouseClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GreenHouseClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HumiditySensorServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HumiditySensorServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TemperatureSensorServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TemperatureSensorServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/humiditySensor/StreamHumidityRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/grpc/humiditySensor/StreamHumidityRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/humiditySensor/StreamHumidityRequestOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/grpc/humiditySensor/StreamHumidityRequestOrBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/humiditySensor/humidityProto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/grpc/humiditySensor/humidityProto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/StreamTemperatureRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/StreamTemperatureRequestOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/StreamTemperatureResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/StreamTemperatureResponseOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/TemperatureSensorServiceGrpc.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/UnaryTemperatureRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/UnaryTemperatureRequestOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/UnaryTemperatureResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/UnaryTemperatureResponseOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/temperatureProto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/proto/humiditySensor.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/humiditySensor.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/proto/temperatureSensor.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/temperatureSensor.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/proto/fanStatus.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/fanStatus.proto" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +23,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -52,6 +36,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.FanStatusServer.executor&quot;: &quot;Run&quot;,
     &quot;Application.GreenHouseClient.executor&quot;: &quot;Run&quot;,
     &quot;Application.HumiditySensorServer.executor&quot;: &quot;Run&quot;,
     &quot;Application.TemperatureSensorServer.executor&quot;: &quot;Run&quot;,
@@ -89,7 +74,8 @@
       <option name="presentableId" value="Default" />
       <updated>1713459055744</updated>
       <workItem from="1713459056813" duration="7241000" />
-      <workItem from="1713513348708" duration="8681000" />
+      <workItem from="1713513348708" duration="12480000" />
+      <workItem from="1713526808519" duration="1407000" />
     </task>
     <task id="LOCAL-00001" summary="Pom">
       <option name="closed" value="true" />
@@ -195,7 +181,39 @@
       <option name="project" value="LOCAL" />
       <updated>1713520547377</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="TEMPERATUR update veriables">
+      <option name="closed" value="true" />
+      <created>1713522800579</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1713522800579</updated>
+    </task>
+    <task id="LOCAL-00015" summary="update Humidity">
+      <option name="closed" value="true" />
+      <created>1713522915636</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1713522915636</updated>
+    </task>
+    <task id="LOCAL-00016" summary="FAN Update (PROTO)">
+      <option name="closed" value="true" />
+      <created>1713525715013</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1713525715013</updated>
+    </task>
+    <task id="LOCAL-00017" summary="FAN Update (SERVER)">
+      <option name="closed" value="true" />
+      <created>1713525737185</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1713525737185</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,22 +241,10 @@
     <MESSAGE value="SERVER TemperatureSensorServer" />
     <MESSAGE value="SERVER HumiditySensorServer" />
     <MESSAGE value="PROTO fanStatus.proto" />
-    <option name="LAST_COMMIT_MESSAGE" value="PROTO fanStatus.proto" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/GreenHouseClient.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/GreenHouseClient.java</url>
-          <line>93</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="TEMPERATUR update veriables" />
+    <MESSAGE value="update Humidity" />
+    <MESSAGE value="FAN Update (PROTO)" />
+    <MESSAGE value="FAN Update (SERVER)" />
+    <option name="LAST_COMMIT_MESSAGE" value="FAN Update (SERVER)" />
   </component>
 </project>

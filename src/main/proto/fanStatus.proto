@@ -9,10 +9,10 @@ option java_outer_classname = "fanStatusProto";
 service StreamingTemperatureFanStatus {
 
   // Bidirectional streaming RPC
-  rpc StreamingTemperatureFanStatus(stream StreamTemperature) /*ClientInformation*/ returns (stream StreamFanStatus);
+  rpc StreamingTemperatureFanStatus(stream StreamTemperatureToFan) /*ClientInformation*/ returns (stream StreamFanStatus);
 }
 
-message StreamTemperature {
+message StreamTemperatureToFan {
   int32 temperature = 1;
 }
 

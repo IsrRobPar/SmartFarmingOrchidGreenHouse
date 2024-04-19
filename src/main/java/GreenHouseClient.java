@@ -11,7 +11,6 @@ public class GreenHouseClient {
     private final ManagedChannel channel;
     private final HumiditySensorServiceGrpc.HumiditySensorServiceStub stub;
     private final TemperatureSensorServiceGrpc.TemperatureSensorServiceStub stub2;
-   // private final StreamingTemperatureFanStatusGrpc.StreamingTemperatureFanStatusStub stub3;
 
 
     public GreenHouseClient(String host, int port) {
@@ -20,11 +19,11 @@ public class GreenHouseClient {
                 .build();
         this.stub = HumiditySensorServiceGrpc.newStub(channel);
         this.stub2 = TemperatureSensorServiceGrpc.newStub(channel);
-       // this.stub3 = StreamingTemperatureFanStatusGrpc.newStub(channel);
+
     }
 
     //HUMIDITY SERVER SERVICE
-    public void getCurrentHumidity(double humidity) {
+    public void getCurrentHumidity(int humidity) {
         UnaryHumidityRequest request = UnaryHumidityRequest.newBuilder()
                 .setHumidity(humidity)
                 .build();
@@ -124,9 +123,6 @@ public class GreenHouseClient {
         GreenHouseClient client2 = new GreenHouseClient("localhost", 28002);
         client2.getCurrentHumidity(50);
         client2.streamHumidityRequest();
-
-       // GreenHouseClient client3 = new GreenHouseClient("localhost", 28100);
-        //client3.getCurrentHumidity(50);
 
         Scanner scanner = new Scanner(System.in);
         while (true) {

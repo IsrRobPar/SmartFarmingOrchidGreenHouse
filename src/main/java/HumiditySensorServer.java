@@ -11,11 +11,11 @@ public class HumiditySensorServer extends HumiditySensorServiceGrpc.HumiditySens
 
     private final Random random = new Random();
 
-    private double randomHumidity() {
-        return random.nextDouble() * 100;
+    private int randomHumidity() {
+        return random.nextInt(100);
     }
 
-    double humidity = randomHumidity();
+    int humidity = randomHumidity();
 
     @Override
     public void getCurrentHumidity(UnaryHumidityRequest request, StreamObserver<UnaryHumidityResponse> responseObserver) {
