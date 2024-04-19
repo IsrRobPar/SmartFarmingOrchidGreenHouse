@@ -40,7 +40,7 @@ public class TemperatureSensorServer extends TemperatureSensorServiceGrpc.Temper
         Runnable streamingTask = () -> {
             try {
                 while (!Thread.currentThread().isInterrupted()) {
-                    String message = " is: " + streamTemperature + ". Current time: " + LocalDateTime.now();
+                    String message = " is: " + streamTemperature + "°C. Current time: " + LocalDateTime.now();
                     StreamTemperatureResponse response = StreamTemperatureResponse.newBuilder()
                             .setMessage(message)
                             .build();
@@ -69,7 +69,7 @@ public class TemperatureSensorServer extends TemperatureSensorServiceGrpc.Temper
 
         // Graceful shutdown
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            System.out.println("Shutting down gRPC server");
+            System.out.println("Shutting down Temperature Sensor Server Server");
             try {
                 grpcServer.shutdown().awaitTermination(30, TimeUnit.SECONDS);
             } catch (InterruptedException e) {
