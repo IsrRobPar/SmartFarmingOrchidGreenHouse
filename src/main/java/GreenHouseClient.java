@@ -107,6 +107,10 @@ public class GreenHouseClient {
 
     }
 
+    //FAN STATUS SERVICE
+
+
+    //MAIN
     public static void main(String[] args) {
         GreenHouseClient client = new GreenHouseClient("localhost", 28001);
         client.getCurrentTemperature(50);
