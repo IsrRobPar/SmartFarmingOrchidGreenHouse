@@ -92,6 +92,12 @@ public class TemperatureSensorServer {
         System.out.println("Server registered to Consul successfully. Host: " + hostAddress);
     }
 
+    public static void main(String[] args) throws IOException, InterruptedException {
+        final TemperatureSensorServer server = new TemperatureSensorServer();
+        server.start();
+        server.blockUntilShutdown();
+    }
+
     public static class TemperatureSensorServerImpl extends TemperatureSensorServiceGrpc.TemperatureSensorServiceImplBase {
 
         private final Random random = new Random();
@@ -134,12 +140,6 @@ public class TemperatureSensorServer {
 
             Thread streamingThread = new Thread(streamingTask);
             streamingThread.start();
-        }
-
-        public static void main(String[] args) throws IOException, InterruptedException {
-            final TemperatureSensorServer server = new TemperatureSensorServer();
-            server.start();
-            server.blockUntilShutdown();
         }
     }
 }

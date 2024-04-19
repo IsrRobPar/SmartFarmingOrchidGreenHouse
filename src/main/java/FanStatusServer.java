@@ -5,7 +5,6 @@ import com.example.grpc.fanStatus.FanServiceGrpc;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.InetAddress;
@@ -21,7 +20,7 @@ public class FanStatusServer{
         /* The port on which the server should run */
         int port = 28100;
         server = ServerBuilder.forPort(port)
-                .addService(new FanStatusServer.FanStatusServerImpl())
+                .addService(new FanStatusServerImpl())
                 .build()
                 .start();
         System.out.println("Server started, listening on " + port);
@@ -93,6 +92,14 @@ public class FanStatusServer{
         System.out.println("Server registered to Consul successfully. Host: " + hostAddress);
     }
 
+    public static void main(String[] args) throws IOException, InterruptedException {
+
+        final FanStatusServer server = new FanStatusServer();
+        server.start();
+        server.blockUntilShutdown();
+
+    }
+
     public static class FanStatusServerImpl extends FanServiceGrpc.FanServiceImplBase {
 
         @Override
@@ -141,14 +148,6 @@ public class FanStatusServer{
                     responseObserver.onCompleted(); // Complete the response stream
                 }
             };
-        }
-
-        public static void main(String[] args) throws IOException, InterruptedException {
-
-            final FanStatusServer server = new FanStatusServer();
-            server.start();
-            server.blockUntilShutdown();
-
         }
     }
 }

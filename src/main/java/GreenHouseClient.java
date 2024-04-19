@@ -1,3 +1,5 @@
+import com.ecwid.consul.v1.ConsulClient;
+import com.ecwid.consul.v1.agent.model.Service;
 import com.example.grpc.fanStatus.StreamFanStatus;
 import com.example.grpc.humiditySensor.*;
 import com.example.grpc.temperatureSensor.*;
@@ -5,24 +7,44 @@ import com.example.grpc.fanStatus.*;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.stub.StreamObserver;
-import java.util.Scanner;
-import java.util.concurrent.TimeUnit;
+import java.util.Collection;
+
+
 
 public class GreenHouseClient {
+
     private final ManagedChannel channel;
     private final HumiditySensorServiceGrpc.HumiditySensorServiceStub stub;
     private final TemperatureSensorServiceGrpc.TemperatureSensorServiceStub stub2;
     private final FanServiceGrpc.FanServiceStub stub3;
 
+    public GreenHouseClient(String consulHost, int consulPort, String consulServiceName) {
 
-    public GreenHouseClient(String host, int port) {
-        this.channel = ManagedChannelBuilder.forAddress(host, port)
+        ConsulClient consulClient = new ConsulClient(consulHost, consulPort);
+
+        Collection<Service> services = consulClient.getAgentServices().getValue().values();
+        Service service = null;
+        for (Service s : services) {
+            if (s.getService().equals(consulServiceName)) {
+                service = s;
+                break;
+            }
+        }
+
+        if (service == null) {
+            throw new RuntimeException("Service not found in Consul: " + consulServiceName);
+        }
+
+        String serverHost = service.getAddress();
+        int serverPort = service.getPort();
+
+
+        this.channel = ManagedChannelBuilder.forAddress(serverHost, serverPort)
                 .usePlaintext()
                 .build();
         this.stub = HumiditySensorServiceGrpc.newStub(channel);
         this.stub2 = TemperatureSensorServiceGrpc.newStub(channel);
         this.stub3 = FanServiceGrpc.newStub(channel);
-
     }
 
     //HUMIDITY SERVER SERVICE
@@ -144,35 +166,26 @@ public class GreenHouseClient {
 
     //MAIN
     public static void main(String[] args) {
-        GreenHouseClient client = new GreenHouseClient("localhost", 28001);
+        String consulHost = "localhost"; // Consul host
+        int consulPort = 8500; // Consul port
+
+
+
+        GreenHouseClient client = new GreenHouseClient(consulHost, consulPort, "temperatureSensorServer-service");
         client.getCurrentTemperature(0);
         client.streamTemperatureRequest();
 
-        GreenHouseClient client2 = new GreenHouseClient("localhost", 28002);
+
+        GreenHouseClient client2 = new GreenHouseClient(consulHost, consulPort, "humiditySensorServer-service");
         client2.getCurrentHumidity(0);
         client2.streamHumidityRequest();
 
-        GreenHouseClient client3 = new GreenHouseClient("localhost", 28100);
+
+        GreenHouseClient client3 = new GreenHouseClient(consulHost, consulPort, "FanStatusServer-service");
         client3.StreamingTemperatureFanStatus();
 
-        Scanner scanner = new Scanner(System.in);
-        while (true) {
-            System.out.println("Press 'Q' to quit");
-            String input = scanner.nextLine();
-            if (input.equalsIgnoreCase("Q")) {
-                client.shutdown();
-                break;
-            }
-        }
 
-    }
-
-    public void shutdown() {
-        try {
-            channel.shutdown().awaitTermination(5, TimeUnit.SECONDS);
-        } catch (InterruptedException e) {
-            System.err.println("Error while shutting down client: " + e.getMessage());
-        }
     }
 }
+
 

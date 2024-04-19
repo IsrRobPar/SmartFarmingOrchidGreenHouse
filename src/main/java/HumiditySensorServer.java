@@ -92,6 +92,12 @@ public class HumiditySensorServer {
         System.out.println("Server registered to Consul successfully. Host: " + hostAddress);
     }
 
+    public static void main(String[] args) throws IOException, InterruptedException {
+        final HumiditySensorServer server = new HumiditySensorServer();
+        server.start();
+        server.blockUntilShutdown();
+    }
+
     public static class HumiditySensorServerImpl extends HumiditySensorServiceGrpc.HumiditySensorServiceImplBase {
 
         private final Random random = new Random();
@@ -135,10 +141,5 @@ public class HumiditySensorServer {
             streamingThread.start();
         }
 
-        public static void main(String[] args) throws IOException, InterruptedException {
-            final HumiditySensorServer server = new HumiditySensorServer();
-            server.start();
-            server.blockUntilShutdown();
-        }
     }
 }
