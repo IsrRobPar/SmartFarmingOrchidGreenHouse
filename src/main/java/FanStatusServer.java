@@ -4,34 +4,33 @@ import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
 import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.concurrent.TimeUnit;
 
 public class FanStatusServer extends FanServiceGrpc.FanServiceImplBase {
 
     @Override
-    public StreamObserver<StreamTemperatureToFan> StreamingTemperatureFanStatus(StreamObserver<StreamFanStatus> responseObserver) {
+    public StreamObserver<StreamTemperatureToFan> streamingTemperatureFanStatus(StreamObserver<StreamFanStatus> responseObserver) {
         return new StreamObserver<StreamTemperatureToFan>() {
+
+            private boolean FanStatus(int temperature) {
+              return temperature >26;
+            }
+
 
             @Override
             public void onNext(StreamTemperatureToFan request) {
-                System.out.println("Received message from client: " + request.getTemperature());
+                int temperature = request.getTemperature();
+                boolean fanStatus = FanStatus(temperature);
 
-                // Respond to the client's message with a stream
-                int temp = request.getTemperature();
-                boolean fanStatus = false;
+                String message = " is: " + fanStatus + "%. Current time: " + LocalDateTime.now();
+                StreamFanStatus response = StreamFanStatus.newBuilder()
+                        .setMessage(fanStatus)
+                        .build();
 
-                if (temp > 28) {
-                     fanStatus = true;
-                 }
-                 {
-                    StreamFanStatus response = StreamFanStatus.newBuilder()
-                            .setMessage(Boolean.parseBoolean("Response " + fanStatus))
-                            .build();
-
-
-                    responseObserver.onNext(response);
-                }
+                responseObserver.onNext(response);
             }
+
 
             @Override
             public void onError(Throwable t) {
@@ -47,6 +46,7 @@ public class FanStatusServer extends FanServiceGrpc.FanServiceImplBase {
     }
 
     public static void main(String[] args) throws IOException, InterruptedException {
+
         FanStatusServer server = new FanStatusServer();
         Server grpcServer = ServerBuilder.forPort(28100)
                 .addService(server)
@@ -68,4 +68,8 @@ public class FanStatusServer extends FanServiceGrpc.FanServiceImplBase {
         grpcServer.awaitTermination();
     }
 
+    @Override
+    public StreamObserver<StreamTemperatureToFan> StreamingTemperatureFanStatus(StreamObserver<StreamFanStatus> responseObserver) {
+        return null;
+    }
 }

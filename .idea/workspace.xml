@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1bbd2568-0184-47c8-810c-e60558882b9f" name="Changes" comment="update">
+    <list default="true" id="1bbd2568-0184-47c8-810c-e60558882b9f" name="Changes" comment="FAN UPDATE">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/FanStatusServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FanStatusServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GreenHouseClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GreenHouseClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/fanStatus/StreamFanStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/fanStatus/StreamFanStatusOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/fanStatus/StreamTemperatureToFan.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/fanStatus/StreamTemperatureToFanOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/fanStatus/StreamingTemperatureFanStatusGrpc.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/fanStatus/fanStatusProto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/proto/fanStatus.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/fanStatus.proto" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +74,7 @@
       <updated>1713459055744</updated>
       <workItem from="1713459056813" duration="7241000" />
       <workItem from="1713513348708" duration="12480000" />
-      <workItem from="1713526808519" duration="4469000" />
+      <workItem from="1713526808519" duration="6283000" />
     </task>
     <task id="LOCAL-00001" summary="Pom">
       <option name="closed" value="true" />
@@ -236,7 +228,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713530304951</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="FAN UPDATE">
+      <option name="closed" value="true" />
+      <created>1713533433605</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1713533433605</updated>
+    </task>
+    <task id="LOCAL-00021" summary="FAN UPDATE">
+      <option name="closed" value="true" />
+      <created>1713533443551</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1713533443551</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,7 +277,8 @@
     <MESSAGE value="FAN Update (PROTO)" />
     <MESSAGE value="FAN Update (SERVER)" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="FAN UPDATE" />
+    <option name="LAST_COMMIT_MESSAGE" value="FAN UPDATE" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
