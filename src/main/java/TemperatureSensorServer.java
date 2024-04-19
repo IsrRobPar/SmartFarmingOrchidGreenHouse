@@ -20,7 +20,7 @@ public class TemperatureSensorServer {
         /* The port on which the server should run */
         int port = 28001;
         server = ServerBuilder.forPort(port)
-                .addService(new TemperatureSensorServerImpl()
+                .addService(new TemperatureSensorServerImpl())
                 .build()
                 .start();
         System.out.println("Server started, listening on " + port);
