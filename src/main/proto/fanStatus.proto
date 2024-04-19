@@ -17,5 +17,5 @@ message StreamTemperatureToFan {
 }
 
 message StreamFanStatus {
-  bool message = 1;
+  string message = 1;
 }

@@ -21,16 +21,28 @@ public class FanStatusServer extends FanServiceGrpc.FanServiceImplBase {
             @Override
             public void onNext(StreamTemperatureToFan request) {
                 int temperature = request.getTemperature();
-                boolean fanStatus = FanStatus(temperature);
-
-                String message = " is: " + fanStatus + "%. Current time: " + LocalDateTime.now();
+                String fanStatus = FanStatus(temperature) ? "active" : "not active";
+                Runnable streamingTask = () -> {
+                    try {
+                        while (!Thread.currentThread().isInterrupted()) {
+                String message = " Temperature is: " + temperature + " FAN is " + fanStatus;
                 StreamFanStatus response = StreamFanStatus.newBuilder()
-                        .setMessage(fanStatus)
+                        .setMessage(message)
                         .build();
 
                 responseObserver.onNext(response);
-            }
+                            Thread.sleep(10000); // Stream every 10 seconds
+                        }
+                    } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt();
+                    } finally {
+                        responseObserver.onCompleted();
+                    }
+                };
 
+                Thread streamingThread = new Thread(streamingTask);
+                streamingThread.start();
+            }
 
             @Override
             public void onError(Throwable t) {
@@ -66,10 +78,5 @@ public class FanStatusServer extends FanServiceGrpc.FanServiceImplBase {
         }));
 
         grpcServer.awaitTermination();
-    }
-
-    @Override
-    public StreamObserver<StreamTemperatureToFan> StreamingTemperatureFanStatus(StreamObserver<StreamFanStatus> responseObserver) {
-        return null;
     }
 }

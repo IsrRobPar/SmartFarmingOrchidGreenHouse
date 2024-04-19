@@ -7,6 +7,14 @@
     <list default="true" id="1bbd2568-0184-47c8-810c-e60558882b9f" name="Changes" comment="FAN UPDATE">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/FanStatusServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FanStatusServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GreenHouseClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GreenHouseClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/fanStatus/FanServiceGrpc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/fanStatus/StreamFanStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/fanStatus/StreamFanStatusOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/fanStatus/StreamTemperatureToFan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/fanStatus/StreamTemperatureToFanOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/fanStatus/fanStatusProto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/proto/fanStatus.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/fanStatus.proto" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +82,7 @@
       <updated>1713459055744</updated>
       <workItem from="1713459056813" duration="7241000" />
       <workItem from="1713513348708" duration="12480000" />
-      <workItem from="1713526808519" duration="6283000" />
+      <workItem from="1713526808519" duration="7335000" />
     </task>
     <task id="LOCAL-00001" summary="Pom">
       <option name="closed" value="true" />
@@ -244,7 +252,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713533443551</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="FAN UPDATE">
+      <option name="closed" value="true" />
+      <created>1713535232135</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1713535232135</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,15 +299,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/GreenHouseClient.java</url>
-          <line>135</line>
-          <properties method="onCompleted">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/GreenHouseClient.java</url>
           <line>112</line>

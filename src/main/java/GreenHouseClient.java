@@ -137,20 +137,19 @@ public class GreenHouseClient {
                 System.out.println("Server stream completed");
             }
         };
-
-        stub3.streamingTemperatureFanStatus(StreamTemperatureToFan.newBuilder().setTemperature(50).build(), responseObserver);
-
+        StreamObserver<StreamTemperatureToFan> requestObserver = stub3.streamingTemperatureFanStatus(responseObserver);
+        requestObserver.onNext(StreamTemperatureToFan.newBuilder().setTemperature(50).build());
     }
 
 
     //MAIN
     public static void main(String[] args) {
         GreenHouseClient client = new GreenHouseClient("localhost", 28001);
-        client.getCurrentTemperature(50);
+        client.getCurrentTemperature(0);
         client.streamTemperatureRequest();
 
         GreenHouseClient client2 = new GreenHouseClient("localhost", 28002);
-        client2.getCurrentHumidity(50);
+        client2.getCurrentHumidity(0);
         client2.streamHumidityRequest();
 
         GreenHouseClient client3 = new GreenHouseClient("localhost", 28100);
