@@ -1,82 +1,154 @@
+import com.ecwid.consul.v1.ConsulClient;
+import com.ecwid.consul.v1.agent.model.NewService;
 import com.example.grpc.fanStatus.*;
 import com.example.grpc.fanStatus.FanServiceGrpc;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
+
+import java.io.FileInputStream;
 import java.io.IOException;
-import java.time.LocalDateTime;
-import java.util.concurrent.TimeUnit;
-
-public class FanStatusServer extends FanServiceGrpc.FanServiceImplBase {
-
-    @Override
-    public StreamObserver<StreamTemperatureToFan> streamingTemperatureFanStatus(StreamObserver<StreamFanStatus> responseObserver) {
-        return new StreamObserver<StreamTemperatureToFan>() {
-
-            private boolean FanStatus(int temperature) {
-              return temperature >26;
-            }
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.util.Properties;
 
 
-            @Override
-            public void onNext(StreamTemperatureToFan request) {
-                int temperature = request.getTemperature();
-                String fanStatus = FanStatus(temperature) ? "active" : "not active";
-                Runnable streamingTask = () -> {
-                    try {
-                        while (!Thread.currentThread().isInterrupted()) {
-                String message = " Temperature is: " + temperature + " FAN is " + fanStatus;
-                StreamFanStatus response = StreamFanStatus.newBuilder()
-                        .setMessage(message)
-                        .build();
+public class FanStatusServer{
 
-                responseObserver.onNext(response);
-                            Thread.sleep(10000); // Stream every 10 seconds
-                        }
-                    } catch (InterruptedException e) {
-                        Thread.currentThread().interrupt();
-                    } finally {
-                        responseObserver.onCompleted();
-                    }
-                };
+    private Server server;
 
-                Thread streamingThread = new Thread(streamingTask);
-                streamingThread.start();
-            }
+    private void start() throws IOException {
+        /* The port on which the server should run */
+        int port = 28100;
+        server = ServerBuilder.forPort(port)
+                .addService(new FanStatusServer.FanStatusServerImpl())
+                .build()
+                .start();
+        System.out.println("Server started, listening on " + port);
 
-            @Override
-            public void onError(Throwable t) {
-                System.err.println("Error from client: " + t.getMessage());
-            }
+        // Register server to Consul
+        registerToConsul();
 
-            @Override
-            public void onCompleted() {
-                System.out.println("Client stream completed");
-                responseObserver.onCompleted(); // Complete the response stream
-            }
-        };
+        // Add shutdown hook
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+            System.err.println("*** shutting down gRPC server since JVM is shutting down");
+            FanStatusServer.this.stop();
+            System.err.println("*** server shut down");
+        }));
     }
 
-    public static void main(String[] args) throws IOException, InterruptedException {
+    private void stop() {
+        if (server != null) {
+            server.shutdown();
+        }
+    }
 
-        FanStatusServer server = new FanStatusServer();
-        Server grpcServer = ServerBuilder.forPort(28100)
-                .addService(server)
-                .build();
+    private void blockUntilShutdown() throws InterruptedException {
+        if (server != null) {
+            server.awaitTermination();
+        }
+    }
 
-        grpcServer.start();
-        System.out.println("Server started, listening on port 28100");
+    private void registerToConsul() {
+        System.out.println("Registering server to Consul...");
 
-        // Graceful shutdown
-        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            System.out.println("Shutting down Fan Status Sensor Server Server");
-            try {
-                grpcServer.shutdown().awaitTermination(30, TimeUnit.SECONDS);
-            } catch (InterruptedException e) {
-                e.printStackTrace(System.err);
-            }
-        }));
+        // Load Consul configuration from consul.properties file
+        Properties props = new Properties();
+        try (FileInputStream fis = new FileInputStream("src/main/resources/consul.fanStatusServer.properties")) {
+            props.load(fis);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return;
+        }
 
-        grpcServer.awaitTermination();
+        // Extract Consul configuration properties
+        String consulHost = props.getProperty("consul.host");
+        int consulPort = Integer.parseInt(props.getProperty("consul.port"));
+        String serviceName = props.getProperty("consul.service.name");
+        int servicePort = Integer.parseInt(props.getProperty("consul.service.port"));
+        String healthCheckInterval = props.getProperty("consul.service.healthCheckInterval");
+
+        // Get host address
+        String hostAddress;
+        try {
+            hostAddress = InetAddress.getLocalHost().getHostAddress();
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+            return;
+        }
+
+        // Create a Consul client
+        ConsulClient consulClient = new ConsulClient(consulHost, consulPort);
+
+        // Define service details
+        NewService newService = new NewService();
+        newService.setName(serviceName);
+        newService.setPort(servicePort);
+        newService.setAddress(hostAddress); // Set host address
+
+        // Register service with Consul
+        consulClient.agentServiceRegister(newService);
+
+        // Print registration success message
+        System.out.println("Server registered to Consul successfully. Host: " + hostAddress);
+    }
+
+    public static class FanStatusServerImpl extends FanServiceGrpc.FanServiceImplBase {
+
+        @Override
+        public StreamObserver<StreamTemperatureToFan> streamingTemperatureFanStatus(StreamObserver<StreamFanStatus> responseObserver) {
+            return new StreamObserver<StreamTemperatureToFan>() {
+
+                private boolean FanStatus(int temperature) {
+                    return temperature > 26;
+                }
+
+
+                @Override
+                public void onNext(StreamTemperatureToFan request) {
+                    int temperature = request.getTemperature();
+                    String fanStatus = FanStatus(temperature) ? "active" : "not active";
+                    Runnable streamingTask = () -> {
+                        try {
+                            while (!Thread.currentThread().isInterrupted()) {
+                                String message = " Temperature is: " + temperature + " FAN is " + fanStatus;
+                                StreamFanStatus response = StreamFanStatus.newBuilder()
+                                        .setMessage(message)
+                                        .build();
+
+                                responseObserver.onNext(response);
+                                Thread.sleep(10000); // Stream every 10 seconds
+                            }
+                        } catch (InterruptedException e) {
+                            Thread.currentThread().interrupt();
+                        } finally {
+                            responseObserver.onCompleted();
+                        }
+                    };
+
+                    Thread streamingThread = new Thread(streamingTask);
+                    streamingThread.start();
+                }
+
+                @Override
+                public void onError(Throwable t) {
+                    System.err.println("Error from client: " + t.getMessage());
+                }
+
+                @Override
+                public void onCompleted() {
+                    System.out.println("Client stream completed");
+                    responseObserver.onCompleted(); // Complete the response stream
+                }
+            };
+        }
+
+        public static void main(String[] args) throws IOException, InterruptedException {
+
+            final FanStatusServer server = new FanStatusServer();
+            server.start();
+            server.blockUntilShutdown();
+
+        }
     }
 }
