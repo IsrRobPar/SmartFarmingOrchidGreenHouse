@@ -115,7 +115,7 @@ public class GreenHouseClient {
             }
         };
 
-        stub2.streamCurrentTemperature(StreamTemperatureRequest.newBuilder().setTemperature(50).build(), responseObserver);
+        stub2.streamCurrentTemperature(StreamTemperatureRequest.newBuilder().setTemperature(0).build(), responseObserver);
 
     }
 
@@ -138,7 +138,7 @@ public class GreenHouseClient {
             }
         };
         StreamObserver<StreamTemperatureToFan> requestObserver = stub3.streamingTemperatureFanStatus(responseObserver);
-        requestObserver.onNext(StreamTemperatureToFan.newBuilder().setTemperature(50).build());
+        requestObserver.onNext(StreamTemperatureToFan.newBuilder().setTemperature(0).build());
     }
 
 
