@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1bbd2568-0184-47c8-810c-e60558882b9f" name="Changes" comment="FAN Update (SERVER)">
+    <list default="true" id="1bbd2568-0184-47c8-810c-e60558882b9f" name="Changes" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/FanStatusServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FanStatusServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GreenHouseClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GreenHouseClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/fanStatus/StreamFanStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/fanStatus/StreamFanStatusOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/fanStatus/StreamTemperatureToFan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/fanStatus/StreamTemperatureToFanOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/fanStatus/StreamingTemperatureFanStatusGrpc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/fanStatus/fanStatusProto.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/proto/fanStatus.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/fanStatus.proto" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +82,7 @@
       <updated>1713459055744</updated>
       <workItem from="1713459056813" duration="7241000" />
       <workItem from="1713513348708" duration="12480000" />
-      <workItem from="1713526808519" duration="1407000" />
+      <workItem from="1713526808519" duration="4469000" />
     </task>
     <task id="LOCAL-00001" summary="Pom">
       <option name="closed" value="true" />
@@ -213,7 +220,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713525737185</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="update">
+      <option name="closed" value="true" />
+      <created>1713530294022</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1713530294022</updated>
+    </task>
+    <task id="LOCAL-00019" summary="update">
+      <option name="closed" value="true" />
+      <created>1713530304951</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1713530304951</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,6 +268,31 @@
     <MESSAGE value="update Humidity" />
     <MESSAGE value="FAN Update (PROTO)" />
     <MESSAGE value="FAN Update (SERVER)" />
-    <option name="LAST_COMMIT_MESSAGE" value="FAN Update (SERVER)" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/GreenHouseClient.java</url>
+          <line>135</line>
+          <properties method="onCompleted">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/GreenHouseClient.java</url>
+          <line>112</line>
+          <properties method="onCompleted">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

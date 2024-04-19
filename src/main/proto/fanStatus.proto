@@ -6,7 +6,7 @@ option java_multiple_files = true;
 option java_package = "com.example.grpc.fanStatus";
 option java_outer_classname = "fanStatusProto";
 
-service StreamingTemperatureFanStatus {
+service FanService {
 
   // Bidirectional streaming RPC
   rpc StreamingTemperatureFanStatus(stream StreamTemperatureToFan) /*ClientInformation*/ returns (stream StreamFanStatus);

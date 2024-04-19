@@ -1,12 +1,12 @@
 import com.example.grpc.fanStatus.*;
-import com.example.grpc.fanStatus.StreamingTemperatureFanStatusGrpc;
+import com.example.grpc.fanStatus.FanServiceGrpc;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-public class FanStatusServer extends StreamingTemperatureFanStatusGrpc.StreamingTemperatureFanStatusImplBase {
+public class FanStatusServer extends FanServiceGrpc.FanServiceImplBase {
 
     @Override
     public StreamObserver<StreamTemperatureToFan> StreamingTemperatureFanStatus(StreamObserver<StreamFanStatus> responseObserver) {
