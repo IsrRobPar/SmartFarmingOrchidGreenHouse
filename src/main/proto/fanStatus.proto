@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package com.example.grpc.fanStatus;
+
+option java_multiple_files = true;
+option java_package = "com.example.grpc.fanStatus";
+option java_outer_classname = "fanStatusProto";
+
+service StreamingTemperatureFanStatus {
+
+  // Bidirectional streaming RPC
+  rpc StreamingTemperatureFanStatus(stream StreamTemperature) /*ClientInformation*/ returns (stream StreamFanStatus);
+}
+
+message StreamTemperature {
+  int32 temperature = 1;
+}
+
+message StreamFanStatus {
+  bool message = 1;
+}
