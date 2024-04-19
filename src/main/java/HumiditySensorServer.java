@@ -32,7 +32,7 @@ public class HumiditySensorServer extends HumiditySensorServiceGrpc.HumiditySens
         Runnable streamingTask = () -> {
             try {
                 while (!Thread.currentThread().isInterrupted()) {
-                    String message = " is: " + streamHumidity + ". Current time: " + LocalDateTime.now();
+                    String message = " is: " + streamHumidity + "%. Current time: " + LocalDateTime.now();
                     StreamHumidityResponse response = StreamHumidityResponse.newBuilder()
                             .setMessage(message)
                             .build();
@@ -61,7 +61,7 @@ public class HumiditySensorServer extends HumiditySensorServiceGrpc.HumiditySens
 
         // Graceful shutdown
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            System.out.println("Shutting down gRPC server");
+            System.out.println("Shutting down Humidity Sensor Server");
             try {
                 grpcServer.shutdown().awaitTermination(30, TimeUnit.SECONDS);
             } catch (InterruptedException e) {

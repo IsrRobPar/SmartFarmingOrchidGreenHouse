@@ -1,11 +1,5 @@
 package com.example.grpc.humiditySensor;
 
-import com.example.grpc.temperatureSensor.StreamTemperatureRequest;
-import com.example.grpc.temperatureSensor.StreamTemperatureResponse;
-import com.example.grpc.temperatureSensor.UnaryTemperatureRequest;
-import com.example.grpc.temperatureSensor.UnaryTemperatureResponse;
-import io.grpc.stub.StreamObserver;
-
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
@@ -199,12 +193,6 @@ public final class HumiditySensorServiceGrpc {
         io.grpc.stub.StreamObserver<com.example.grpc.humiditySensor.StreamHumidityResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getStreamCurrentHumidityMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    public void streamCurrentTemperature(StreamTemperatureRequest build, StreamObserver<StreamTemperatureResponse> responseObserver) {
-    }
-
-    public void getCurrentTemperature(UnaryTemperatureRequest request, StreamObserver<UnaryTemperatureResponse> unaryRequestCompleted) {
     }
   }
 
