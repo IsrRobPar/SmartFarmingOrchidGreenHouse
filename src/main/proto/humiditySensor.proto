@@ -15,7 +15,7 @@ service HumiditySensorService{
 }
 
 message UnaryHumidityRequest {
-  double humidity = 1;
+  int32 humidity = 1;
 }
 
 message UnaryHumidityResponse {
@@ -23,7 +23,7 @@ message UnaryHumidityResponse {
 }
 
 message StreamHumidityRequest {
-  double streamHumidity = 1;
+  int32 humidity = 1;
 }
 
 message StreamHumidityResponse {

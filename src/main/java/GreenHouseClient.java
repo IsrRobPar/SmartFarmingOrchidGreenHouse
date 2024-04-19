@@ -1,5 +1,6 @@
 import com.example.grpc.humiditySensor.*;
 import com.example.grpc.temperatureSensor.*;
+import com.example.grpc.fanStatus.*;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.stub.StreamObserver;
@@ -10,6 +11,8 @@ public class GreenHouseClient {
     private final ManagedChannel channel;
     private final HumiditySensorServiceGrpc.HumiditySensorServiceStub stub;
     private final TemperatureSensorServiceGrpc.TemperatureSensorServiceStub stub2;
+   // private final StreamingTemperatureFanStatusGrpc.StreamingTemperatureFanStatusStub stub3;
+
 
     public GreenHouseClient(String host, int port) {
         this.channel = ManagedChannelBuilder.forAddress(host, port)
@@ -17,6 +20,7 @@ public class GreenHouseClient {
                 .build();
         this.stub = HumiditySensorServiceGrpc.newStub(channel);
         this.stub2 = TemperatureSensorServiceGrpc.newStub(channel);
+       // this.stub3 = StreamingTemperatureFanStatusGrpc.newStub(channel);
     }
 
     //HUMIDITY SERVER SERVICE
@@ -59,12 +63,12 @@ public class GreenHouseClient {
                 System.out.println("Server streaming completed");
             }
         };
-        stub.streamCurrentHumidity(StreamHumidityRequest.newBuilder().setStreamHumidity(50).build(), responseObserver);
+        stub.streamCurrentHumidity(StreamHumidityRequest.newBuilder().setHumidity(50).build(), responseObserver);
 
     }
 
     //TEMPERATURE SERVER SERVICE
-    public void getCurrentTemperature(double temperature) {
+    public void getCurrentTemperature(int temperature) {
         UnaryTemperatureRequest request = UnaryTemperatureRequest.newBuilder()
                 .setTemperature(temperature)
                 .build();
@@ -103,11 +107,12 @@ public class GreenHouseClient {
                 System.out.println("Server streaming completed");
             }
         };
-        stub2.streamCurrentTemperature(StreamTemperatureRequest.newBuilder().setStreamTemperature(50).build(), responseObserver);
+        stub2.streamCurrentTemperature(StreamTemperatureRequest.newBuilder().setTemperature(50).build(), responseObserver);
 
     }
 
     //FAN STATUS SERVICE
+
 
 
     //MAIN
@@ -119,6 +124,9 @@ public class GreenHouseClient {
         GreenHouseClient client2 = new GreenHouseClient("localhost", 28002);
         client2.getCurrentHumidity(50);
         client2.streamHumidityRequest();
+
+       // GreenHouseClient client3 = new GreenHouseClient("localhost", 28100);
+        //client3.getCurrentHumidity(50);
 
         Scanner scanner = new Scanner(System.in);
         while (true) {
