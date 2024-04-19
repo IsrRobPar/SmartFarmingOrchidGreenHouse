@@ -15,7 +15,7 @@ service TemperatureSensorService{
 }
 
 message UnaryTemperatureRequest {
-  double temperature = 1;
+  int32 temperature = 1;
 }
 
 message UnaryTemperatureResponse {
@@ -23,7 +23,7 @@ message UnaryTemperatureResponse {
 }
 
 message StreamTemperatureRequest {
-  double streamTemperature = 1;
+  int32 temperature = 1;
 }
 
 message StreamTemperatureResponse {
