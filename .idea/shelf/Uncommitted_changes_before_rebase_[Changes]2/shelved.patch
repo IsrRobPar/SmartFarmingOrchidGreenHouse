@@ -1,0 +1,22 @@
+Index: src/main/java/Laucher.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\r\n/*\r\n\r\npublic class Launcher {\r\n    public static void main(String[] args) {\r\n        SimplerFormApp.main(args);\r\n    }\r\n}\r\n\r\n */
+===================================================================
+diff --git a/src/main/java/Laucher.java b/src/main/java/Laucher.java
+--- a/src/main/java/Laucher.java	
++++ b/src/main/java/Laucher.java	
+@@ -1,4 +1,3 @@
+-
+ /*
+ 
+ public class Launcher {
+@@ -6,5 +5,4 @@
+         SimplerFormApp.main(args);
+     }
+ }
+-
+- */
+\ No newline at end of file
++*/
+\ No newline at end of file
