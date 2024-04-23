@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-
 public class TemperatureSensor extends TemperatureSensorConnectionGrpc.TemperatureSensorConnectionImplBase {
 
     @Override
@@ -54,7 +53,7 @@ public class TemperatureSensor extends TemperatureSensorConnectionGrpc.Temperatu
                 .build();
 
         grpcServer.start();
-        System.out.println("Server started, listening on port 28001");
+        System.out.println("Temperature sensor Server started, listening on port 28001");
 
         // Graceful shutdown
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
