@@ -6,8 +6,8 @@ option java_multiple_files = true;
 option java_package = "com.example.grpc.registerDataService";
 option java_outer_classname = "registerDataServiceProto";
 
-service SensorDataService {
-  rpc sendData(SensorDataRequest) returns (SensorDataResponse);
+service RegisterDataService {
+  rpc sendData(stream SensorDataRequest) returns (SensorDataResponse);
 }
 
 message SensorDataRequest {
