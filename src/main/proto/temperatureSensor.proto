@@ -6,19 +6,19 @@ option java_multiple_files = true;
 option java_package = "com.example.grpc.temperatureSensor";
 option java_outer_classname = "temperatureProto";
 
-service TemperatureSensorService{
+service TemperatureSensorConnection{
   // Unary RPC
-  rpc getCurrentTemperature (UnaryTemperatureRequest) returns (UnaryTemperatureResponse);
+  rpc getTemperatureConnection(TemperatureConnectionRequest) returns (TemperatureConnectionResponse);
 
   // Server-side streaming RPC
   rpc streamCurrentTemperature(StreamTemperatureRequest) returns (stream StreamTemperatureResponse);
 }
 
-message UnaryTemperatureRequest {
-  int32 temperature = 1;
+message TemperatureConnectionRequest {
+  string  serverName = 1;
 }
 
-message UnaryTemperatureResponse {
+message TemperatureConnectionResponse {
   string message = 1;
 }
 
