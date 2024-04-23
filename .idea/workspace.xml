@@ -4,47 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1bbd2568-0184-47c8-810c-e60558882b9f" name="Changes" comment="NEW NEW TEMPERATURE PROTO">
-      <change afterPath="$PROJECT_DIR$/src/main/java/OrchidGreenHouseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/TemperatureSensor.java" afterDir="false" />
+    <list default="true" id="1bbd2568-0184-47c8-810c-e60558882b9f" name="Changes" comment="SERVER Fan Service">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FanStatusServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GreenHouseClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HumiditySensorServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TemperatureSensorServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/fanStatus/FanServiceGrpc.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/fanStatus/StreamFanStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/fanStatus/StreamFanStatusOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/fanStatus/StreamTemperatureToFan.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/fanStatus/StreamTemperatureToFanOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/fanStatus/fanStatusProto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/humiditySensor/HumiditySensorServiceGrpc.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/humiditySensor/StreamHumidityRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/humiditySensor/StreamHumidityRequestOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/humiditySensor/StreamHumidityResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/humiditySensor/StreamHumidityResponseOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/humiditySensor/UnaryHumidityRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/humiditySensor/UnaryHumidityRequestOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/humiditySensor/UnaryHumidityResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/humiditySensor/UnaryHumidityResponseOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/humiditySensor/humidityProto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/StreamFanStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OrchidGreenHouseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OrchidGreenHouseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TemperatureSensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TemperatureSensor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/StreamTemperatureRequest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/StreamTemperatureRequestOrBuilder.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/StreamTemperatureResponse.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/StreamTemperatureResponseOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/TemperatureSensorServiceGrpc.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/UnaryTemperatureRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/UnaryTemperatureRequestOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/UnaryTemperatureResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/UnaryTemperatureResponseOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/TemperatureConnectionRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/TemperatureConnectionRequestOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/TemperatureConnectionResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/TemperatureConnectionResponseOrBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/TemperatureSensorConnectionGrpc.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/temperatureProto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/proto/fanStatus.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/proto/humiditySensor.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/proto/temperatureSensor.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/temperatureSensor.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/consul.fanStatusServer.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/consul.humiditySensorServer.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/consul.temperatureSensorServer.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/proto/temperatureSensor.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/sensors/temperatureSensor.proto" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +53,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.FanService.executor": "Run",
     "Application.FanStatusServer.executor": "Run",
     "Application.GreenHouseClient.executor": "Run",
     "Application.HumiditySensorServer.executor": "Run",
@@ -105,6 +80,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\NCI\DistributedSystem\CA_DistribuitedSystems\OrchidGreenHouse\src\main\proto\sensors" />
       <recent name="C:\NCI\DistributedSystem\CA_DistribuitedSystems\OrchidGreenHouse\src\main\resources" />
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -135,7 +111,7 @@
       <workItem from="1713526808519" duration="11849000" />
       <workItem from="1713541121222" duration="13178000" />
       <workItem from="1713860412657" duration="6673000" />
-      <workItem from="1713894770147" duration="6992000" />
+      <workItem from="1713894770147" duration="19305000" />
     </task>
     <task id="LOCAL-00001" summary="Pom">
       <option name="closed" value="true" />
@@ -409,7 +385,71 @@
       <option name="project" value="LOCAL" />
       <updated>1713873276975</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="DELETE">
+      <option name="closed" value="true" />
+      <created>1713902052946</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1713902052946</updated>
+    </task>
+    <task id="LOCAL-00036" summary="DELETE">
+      <option name="closed" value="true" />
+      <created>1713902111227</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1713902111227</updated>
+    </task>
+    <task id="LOCAL-00037" summary="PROTO temperatureSensor.proto NEW">
+      <option name="closed" value="true" />
+      <created>1713902138031</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1713902138031</updated>
+    </task>
+    <task id="LOCAL-00038" summary="SERVER TemperatureSensor.java NEW">
+      <option name="closed" value="true" />
+      <created>1713902165075</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1713902165075</updated>
+    </task>
+    <task id="LOCAL-00039" summary="CLIENT OrchidGreenHouseController.java NEW">
+      <option name="closed" value="true" />
+      <created>1713902190514</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1713902190514</updated>
+    </task>
+    <task id="LOCAL-00040" summary="OTHERS UPDATES">
+      <option name="closed" value="true" />
+      <created>1713902232731</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1713902232731</updated>
+    </task>
+    <task id="LOCAL-00041" summary="PROTO Fan Service">
+      <option name="closed" value="true" />
+      <created>1713912214641</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1713912214641</updated>
+    </task>
+    <task id="LOCAL-00042" summary="SERVER Fan Service">
+      <option name="closed" value="true" />
+      <created>1713912228021</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1713912228021</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -427,10 +467,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Pom" />
-    <MESSAGE value="Proto humiditySensor.proto" />
-    <MESSAGE value="SERVER humiditySensorServer" />
-    <MESSAGE value="CLIENT humiditySensor" />
     <MESSAGE value="PROTO temperatureSensor.proto" />
     <MESSAGE value="SERVER HumidityServer" />
     <MESSAGE value="CLIENT" />
@@ -449,7 +485,14 @@
     <MESSAGE value="CONSUL SERVER TemperatureSensorServer" />
     <MESSAGE value="CONSUL SERVER FanStatusServer" />
     <MESSAGE value="CONSUL Register" />
-    <option name="LAST_COMMIT_MESSAGE" value="CONSUL Register" />
+    <MESSAGE value="DELETE" />
+    <MESSAGE value="PROTO temperatureSensor.proto NEW" />
+    <MESSAGE value="SERVER TemperatureSensor.java NEW" />
+    <MESSAGE value="CLIENT OrchidGreenHouseController.java NEW" />
+    <MESSAGE value="OTHERS UPDATES" />
+    <MESSAGE value="PROTO Fan Service" />
+    <MESSAGE value="SERVER Fan Service" />
+    <option name="LAST_COMMIT_MESSAGE" value="SERVER Fan Service" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

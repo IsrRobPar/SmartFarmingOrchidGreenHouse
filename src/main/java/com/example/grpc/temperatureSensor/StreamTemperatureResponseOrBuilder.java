@@ -16,4 +16,9 @@ public interface StreamTemperatureResponseOrBuilder extends
    */
   com.google.protobuf.ByteString
       getMessageBytes();
+
+  /**
+   * <code>int32 temperature = 2;</code>
+   */
+  int getTemperature();
 }
