@@ -1,4 +1,18 @@
-syntax = "proto3";
+
+
+
+
+
+
+
+crie um proto para um servico grcp cliente side que envie dados de temperatura, humidade do solo, data e hora para deixar armazenado num  array list
+
+
+
+
+
+
+
 
 package com.example.grpc.registerDataService;
 
