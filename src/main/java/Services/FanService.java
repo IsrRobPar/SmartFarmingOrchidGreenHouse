@@ -1,7 +1,12 @@
-import com.example.grpc.fanService.*;
+package Services;
+
+import com.example.grpc.fanService.FanServiceGrpc;
+import com.example.grpc.fanService.StreamFanStatus;
+import com.example.grpc.fanService.StreamTemperatureToFan;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
+
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 

@@ -1,12 +1,17 @@
-import com.example.grpc.recordDataService.*;
+package Database;
+
+import com.example.grpc.recordDataService.RecordDataServiceGrpc;
+import com.example.grpc.recordDataService.RecordSensorDataRequest;
+import com.example.grpc.recordDataService.RecordSensorDataResponse;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
-import java.io.IOException;
-import java.util.List;
-import java.util.ArrayList;
 
-public class RecordData {
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class RecordDataSensors {
     private final List<SensorData> recordDataList = new ArrayList<>();
 
     private Server server;
@@ -32,7 +37,7 @@ public class RecordData {
         // Add shutdown hook
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             System.err.println("*** shutting down gRPC server since JVM is shutting down");
-            RecordData.this.stop();
+            RecordDataSensors.this.stop();
             System.err.println("*** server shut down");
         }));
     }
@@ -55,7 +60,7 @@ public class RecordData {
 
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        final RecordData server = new RecordData();
+        final RecordDataSensors server = new RecordDataSensors();
         server.start();
         server.blockUntilShutdown();
     }
@@ -68,6 +73,7 @@ public class RecordData {
                 public void onNext(RecordSensorDataRequest request) {
                     SensorData sensorData = new SensorData(request.getTemperature(), request.getSoilHumidity());
                     recordDataList.add(sensorData);
+                    System.out.println("Record sensor data: " + sensorData);
                 }
 
                 @Override
@@ -97,13 +103,24 @@ public class RecordData {
             this.soilHumidity = soilHumidity;
         }
 
-        public float getTemperature() {
+        public int getTemperature() {
             return temperature;
         }
 
-        public float getSoilHumidity() {
+        public int getSoilHumidity() {
             return soilHumidity;
+
         }
+
+        @Override
+        public String toString() {
+            return "Sensor Data{ " +
+                    " temperature = " + temperature +
+                    ", soil humidity = " + soilHumidity +
+                    " }";
+        }
+
     }
+
 
 }

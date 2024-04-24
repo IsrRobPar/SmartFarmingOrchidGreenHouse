@@ -1,15 +1,36 @@
-import com.example.grpc.fanService.*;
-import com.example.grpc.recordDataService.*;
+package com.example.grpc.controller;
+
+import com.example.grpc.fanService.FanServiceGrpc;
+import com.example.grpc.fanService.StreamFanStatus;
+import com.example.grpc.fanService.StreamTemperatureToFan;
+import com.example.grpc.recordDataService.RecordDataServiceGrpc;
+import com.example.grpc.recordDataService.RecordSensorDataRequest;
+import com.example.grpc.recordDataService.RecordSensorDataResponse;
 import com.example.grpc.temperatureSensor.*;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.stub.StreamObserver;
+
 import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
+
 public class OrchidGreenHouseController {
+
+    //GUI
+
+
+
+
+
+
+
+
+
+
+
     private final ManagedChannel channel;
     private final TemperatureSensorConnectionGrpc.TemperatureSensorConnectionStub temperatureSensorStub;
     private final FanServiceGrpc.FanServiceStub fanServiceStub;
@@ -134,11 +155,27 @@ public class OrchidGreenHouseController {
                     .build());
 
             // Sleep for 1 second between sending each data point
-            Thread.sleep(1000);
+            Thread.sleep(2000);
 
             requestObserver.onNext(RecordSensorDataRequest.newBuilder()
                     .setTemperature(29)
                     .setSoilHumidity(50)
+                    .build());
+
+            // Sleep for 1 second between sending each data point
+            Thread.sleep(2000);
+
+            requestObserver.onNext(RecordSensorDataRequest.newBuilder()
+                    .setTemperature(29)
+                    .setSoilHumidity(50)
+                    .build());
+
+            // Sleep for 1 second between sending each data point
+            Thread.sleep(2000);
+
+            requestObserver.onNext(RecordSensorDataRequest.newBuilder()
+                    .setTemperature(25)
+                    .setSoilHumidity(60)
                     .build());
 
             requestObserver.onCompleted();
