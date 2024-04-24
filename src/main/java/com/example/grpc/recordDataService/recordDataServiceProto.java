@@ -34,16 +34,16 @@ public final class recordDataServiceProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\020recordData.proto\022\"com.example.grpc.rec" +
-      "ordDataService\"V\n\027RecordSensorDataReques" +
+      "ordDataService\"D\n\027RecordSensorDataReques" +
       "t\022\023\n\013temperature\030\001 \001(\005\022\024\n\014soilHumidity\030\002" +
-      " \001(\005\022\020\n\010dateTime\030\003 \001(\t\"+\n\030RecordSensorDa" +
-      "taResponse\022\017\n\007message\030\001 \001(\t2\245\001\n\023Register" +
-      "DataService\022\215\001\n\016sendRecordData\022;.com.exa" +
-      "mple.grpc.recordDataService.RecordSensor" +
-      "DataRequest\032<.com.example.grpc.recordDat" +
-      "aService.RecordSensorDataResponse(\001B>\n\"c" +
-      "om.example.grpc.recordDataServiceB\026recor" +
-      "dDataServiceProtoP\001b\006proto3"
+      " \001(\005\"+\n\030RecordSensorDataResponse\022\017\n\007mess" +
+      "age\030\001 \001(\t2\243\001\n\021RecordDataService\022\215\001\n\016send" +
+      "RecordData\022;.com.example.grpc.recordData" +
+      "Service.RecordSensorDataRequest\032<.com.ex" +
+      "ample.grpc.recordDataService.RecordSenso" +
+      "rDataResponse(\001B>\n\"com.example.grpc.reco" +
+      "rdDataServiceB\026recordDataServiceProtoP\001b" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -62,7 +62,7 @@ public final class recordDataServiceProto {
     internal_static_com_example_grpc_recordDataService_RecordSensorDataRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_example_grpc_recordDataService_RecordSensorDataRequest_descriptor,
-        new java.lang.String[] { "Temperature", "SoilHumidity", "DateTime", });
+        new java.lang.String[] { "Temperature", "SoilHumidity", });
     internal_static_com_example_grpc_recordDataService_RecordSensorDataResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_com_example_grpc_recordDataService_RecordSensorDataResponse_fieldAccessorTable = new

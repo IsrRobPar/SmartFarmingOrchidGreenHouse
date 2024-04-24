@@ -16,14 +16,4 @@ public interface RecordSensorDataRequestOrBuilder extends
    * <code>int32 soilHumidity = 2;</code>
    */
   int getSoilHumidity();
-
-  /**
-   * <code>string dateTime = 3;</code>
-   */
-  java.lang.String getDateTime();
-  /**
-   * <code>string dateTime = 3;</code>
-   */
-  com.google.protobuf.ByteString
-      getDateTimeBytes();
 }

@@ -8,11 +8,11 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
     value = "by gRPC proto compiler (version 1.61.1)",
     comments = "Source: recordData.proto")
 @io.grpc.stub.annotations.GrpcGenerated
-public final class RegisterDataServiceGrpc {
+public final class RecordDataServiceGrpc {
 
-  private RegisterDataServiceGrpc() {}
+  private RecordDataServiceGrpc() {}
 
-  public static final java.lang.String SERVICE_NAME = "com.example.grpc.recordDataService.RegisterDataService";
+  public static final java.lang.String SERVICE_NAME = "com.example.grpc.recordDataService.RecordDataService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.example.grpc.recordDataService.RecordSensorDataRequest,
@@ -26,10 +26,10 @@ public final class RegisterDataServiceGrpc {
   public static io.grpc.MethodDescriptor<com.example.grpc.recordDataService.RecordSensorDataRequest,
       com.example.grpc.recordDataService.RecordSensorDataResponse> getSendRecordDataMethod() {
     io.grpc.MethodDescriptor<com.example.grpc.recordDataService.RecordSensorDataRequest, com.example.grpc.recordDataService.RecordSensorDataResponse> getSendRecordDataMethod;
-    if ((getSendRecordDataMethod = RegisterDataServiceGrpc.getSendRecordDataMethod) == null) {
-      synchronized (RegisterDataServiceGrpc.class) {
-        if ((getSendRecordDataMethod = RegisterDataServiceGrpc.getSendRecordDataMethod) == null) {
-          RegisterDataServiceGrpc.getSendRecordDataMethod = getSendRecordDataMethod =
+    if ((getSendRecordDataMethod = RecordDataServiceGrpc.getSendRecordDataMethod) == null) {
+      synchronized (RecordDataServiceGrpc.class) {
+        if ((getSendRecordDataMethod = RecordDataServiceGrpc.getSendRecordDataMethod) == null) {
+          RecordDataServiceGrpc.getSendRecordDataMethod = getSendRecordDataMethod =
               io.grpc.MethodDescriptor.<com.example.grpc.recordDataService.RecordSensorDataRequest, com.example.grpc.recordDataService.RecordSensorDataResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "sendRecordData"))
@@ -38,7 +38,7 @@ public final class RegisterDataServiceGrpc {
                   com.example.grpc.recordDataService.RecordSensorDataRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.example.grpc.recordDataService.RecordSensorDataResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new RegisterDataServiceMethodDescriptorSupplier("sendRecordData"))
+              .setSchemaDescriptor(new RecordDataServiceMethodDescriptorSupplier("sendRecordData"))
               .build();
         }
       }
@@ -49,45 +49,45 @@ public final class RegisterDataServiceGrpc {
   /**
    * Creates a new async stub that supports all call types for the service
    */
-  public static RegisterDataServiceStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<RegisterDataServiceStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<RegisterDataServiceStub>() {
+  public static RecordDataServiceStub newStub(io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<RecordDataServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RecordDataServiceStub>() {
         @java.lang.Override
-        public RegisterDataServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new RegisterDataServiceStub(channel, callOptions);
+        public RecordDataServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RecordDataServiceStub(channel, callOptions);
         }
       };
-    return RegisterDataServiceStub.newStub(factory, channel);
+    return RecordDataServiceStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
-  public static RegisterDataServiceBlockingStub newBlockingStub(
+  public static RecordDataServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<RegisterDataServiceBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<RegisterDataServiceBlockingStub>() {
+    io.grpc.stub.AbstractStub.StubFactory<RecordDataServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RecordDataServiceBlockingStub>() {
         @java.lang.Override
-        public RegisterDataServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new RegisterDataServiceBlockingStub(channel, callOptions);
+        public RecordDataServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RecordDataServiceBlockingStub(channel, callOptions);
         }
       };
-    return RegisterDataServiceBlockingStub.newStub(factory, channel);
+    return RecordDataServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new ListenableFuture-style stub that supports unary calls on the service
    */
-  public static RegisterDataServiceFutureStub newFutureStub(
+  public static RecordDataServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<RegisterDataServiceFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<RegisterDataServiceFutureStub>() {
+    io.grpc.stub.AbstractStub.StubFactory<RecordDataServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RecordDataServiceFutureStub>() {
         @java.lang.Override
-        public RegisterDataServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new RegisterDataServiceFutureStub(channel, callOptions);
+        public RecordDataServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RecordDataServiceFutureStub(channel, callOptions);
         }
       };
-    return RegisterDataServiceFutureStub.newStub(factory, channel);
+    return RecordDataServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -103,30 +103,30 @@ public final class RegisterDataServiceGrpc {
   }
 
   /**
-   * Base class for the server implementation of the service RegisterDataService.
+   * Base class for the server implementation of the service RecordDataService.
    */
-  public static abstract class RegisterDataServiceImplBase
+  public static abstract class RecordDataServiceImplBase
       implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return RegisterDataServiceGrpc.bindService(this);
+      return RecordDataServiceGrpc.bindService(this);
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service RegisterDataService.
+   * A stub to allow clients to do asynchronous rpc calls to service RecordDataService.
    */
-  public static final class RegisterDataServiceStub
-      extends io.grpc.stub.AbstractAsyncStub<RegisterDataServiceStub> {
-    private RegisterDataServiceStub(
+  public static final class RecordDataServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<RecordDataServiceStub> {
+    private RecordDataServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RegisterDataServiceStub build(
+    protected RecordDataServiceStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new RegisterDataServiceStub(channel, callOptions);
+      return new RecordDataServiceStub(channel, callOptions);
     }
 
     /**
@@ -139,36 +139,36 @@ public final class RegisterDataServiceGrpc {
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service RegisterDataService.
+   * A stub to allow clients to do synchronous rpc calls to service RecordDataService.
    */
-  public static final class RegisterDataServiceBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<RegisterDataServiceBlockingStub> {
-    private RegisterDataServiceBlockingStub(
+  public static final class RecordDataServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<RecordDataServiceBlockingStub> {
+    private RecordDataServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RegisterDataServiceBlockingStub build(
+    protected RecordDataServiceBlockingStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new RegisterDataServiceBlockingStub(channel, callOptions);
+      return new RecordDataServiceBlockingStub(channel, callOptions);
     }
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service RegisterDataService.
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service RecordDataService.
    */
-  public static final class RegisterDataServiceFutureStub
-      extends io.grpc.stub.AbstractFutureStub<RegisterDataServiceFutureStub> {
-    private RegisterDataServiceFutureStub(
+  public static final class RecordDataServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<RecordDataServiceFutureStub> {
+    private RecordDataServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RegisterDataServiceFutureStub build(
+    protected RecordDataServiceFutureStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new RegisterDataServiceFutureStub(channel, callOptions);
+      return new RecordDataServiceFutureStub(channel, callOptions);
     }
   }
 
@@ -222,9 +222,9 @@ public final class RegisterDataServiceGrpc {
         .build();
   }
 
-  private static abstract class RegisterDataServiceBaseDescriptorSupplier
+  private static abstract class RecordDataServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    RegisterDataServiceBaseDescriptorSupplier() {}
+    RecordDataServiceBaseDescriptorSupplier() {}
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
@@ -233,21 +233,21 @@ public final class RegisterDataServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("RegisterDataService");
+      return getFileDescriptor().findServiceByName("RecordDataService");
     }
   }
 
-  private static final class RegisterDataServiceFileDescriptorSupplier
-      extends RegisterDataServiceBaseDescriptorSupplier {
-    RegisterDataServiceFileDescriptorSupplier() {}
+  private static final class RecordDataServiceFileDescriptorSupplier
+      extends RecordDataServiceBaseDescriptorSupplier {
+    RecordDataServiceFileDescriptorSupplier() {}
   }
 
-  private static final class RegisterDataServiceMethodDescriptorSupplier
-      extends RegisterDataServiceBaseDescriptorSupplier
+  private static final class RecordDataServiceMethodDescriptorSupplier
+      extends RecordDataServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
     private final java.lang.String methodName;
 
-    RegisterDataServiceMethodDescriptorSupplier(java.lang.String methodName) {
+    RecordDataServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
@@ -262,11 +262,11 @@ public final class RegisterDataServiceGrpc {
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
     io.grpc.ServiceDescriptor result = serviceDescriptor;
     if (result == null) {
-      synchronized (RegisterDataServiceGrpc.class) {
+      synchronized (RecordDataServiceGrpc.class) {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new RegisterDataServiceFileDescriptorSupplier())
+              .setSchemaDescriptor(new RecordDataServiceFileDescriptorSupplier())
               .addMethod(getSendRecordDataMethod())
               .build();
         }

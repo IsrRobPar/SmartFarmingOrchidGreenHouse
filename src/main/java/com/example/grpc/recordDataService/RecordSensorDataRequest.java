@@ -18,7 +18,6 @@ private static final long serialVersionUID = 0L;
   private RecordSensorDataRequest() {
     temperature_ = 0;
     soilHumidity_ = 0;
-    dateTime_ = "";
   }
 
   @java.lang.Override
@@ -53,12 +52,6 @@ private static final long serialVersionUID = 0L;
           case 16: {
 
             soilHumidity_ = input.readInt32();
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            dateTime_ = s;
             break;
           }
           default: {
@@ -111,40 +104,6 @@ private static final long serialVersionUID = 0L;
     return soilHumidity_;
   }
 
-  public static final int DATETIME_FIELD_NUMBER = 3;
-  private volatile java.lang.Object dateTime_;
-  /**
-   * <code>string dateTime = 3;</code>
-   */
-  public java.lang.String getDateTime() {
-    java.lang.Object ref = dateTime_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      dateTime_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string dateTime = 3;</code>
-   */
-  public com.google.protobuf.ByteString
-      getDateTimeBytes() {
-    java.lang.Object ref = dateTime_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      dateTime_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -165,9 +124,6 @@ private static final long serialVersionUID = 0L;
     if (soilHumidity_ != 0) {
       output.writeInt32(2, soilHumidity_);
     }
-    if (!getDateTimeBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, dateTime_);
-    }
     unknownFields.writeTo(output);
   }
 
@@ -184,9 +140,6 @@ private static final long serialVersionUID = 0L;
     if (soilHumidity_ != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(2, soilHumidity_);
-    }
-    if (!getDateTimeBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, dateTime_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -208,8 +161,6 @@ private static final long serialVersionUID = 0L;
         == other.getTemperature());
     result = result && (getSoilHumidity()
         == other.getSoilHumidity());
-    result = result && getDateTime()
-        .equals(other.getDateTime());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -225,8 +176,6 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getTemperature();
     hash = (37 * hash) + SOILHUMIDITY_FIELD_NUMBER;
     hash = (53 * hash) + getSoilHumidity();
-    hash = (37 * hash) + DATETIME_FIELD_NUMBER;
-    hash = (53 * hash) + getDateTime().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -364,8 +313,6 @@ private static final long serialVersionUID = 0L;
 
       soilHumidity_ = 0;
 
-      dateTime_ = "";
-
       return this;
     }
 
@@ -394,7 +341,6 @@ private static final long serialVersionUID = 0L;
       com.example.grpc.recordDataService.RecordSensorDataRequest result = new com.example.grpc.recordDataService.RecordSensorDataRequest(this);
       result.temperature_ = temperature_;
       result.soilHumidity_ = soilHumidity_;
-      result.dateTime_ = dateTime_;
       onBuilt();
       return result;
     }
@@ -448,10 +394,6 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getSoilHumidity() != 0) {
         setSoilHumidity(other.getSoilHumidity());
-      }
-      if (!other.getDateTime().isEmpty()) {
-        dateTime_ = other.dateTime_;
-        onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -530,75 +472,6 @@ private static final long serialVersionUID = 0L;
     public Builder clearSoilHumidity() {
       
       soilHumidity_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object dateTime_ = "";
-    /**
-     * <code>string dateTime = 3;</code>
-     */
-    public java.lang.String getDateTime() {
-      java.lang.Object ref = dateTime_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        dateTime_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string dateTime = 3;</code>
-     */
-    public com.google.protobuf.ByteString
-        getDateTimeBytes() {
-      java.lang.Object ref = dateTime_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        dateTime_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string dateTime = 3;</code>
-     */
-    public Builder setDateTime(
-        java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
-      dateTime_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string dateTime = 3;</code>
-     */
-    public Builder clearDateTime() {
-      
-      dateTime_ = getDefaultInstance().getDateTime();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string dateTime = 3;</code>
-     */
-    public Builder setDateTimeBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
-      dateTime_ = value;
       onChanged();
       return this;
     }
