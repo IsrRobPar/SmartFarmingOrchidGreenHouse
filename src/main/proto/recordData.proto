@@ -6,14 +6,13 @@ option java_multiple_files = true;
 option java_package = "com.example.grpc.recordDataService";
 option java_outer_classname = "recordDataServiceProto";
 
-service RegisterDataService {
+service RecordDataService {
   rpc sendRecordData(stream RecordSensorDataRequest) returns (RecordSensorDataResponse);
 }
 
 message RecordSensorDataRequest {
   int32 temperature = 1;
   int32 soilHumidity = 2;
-  string dateTime = 3;
 }
 
 message RecordSensorDataResponse {
