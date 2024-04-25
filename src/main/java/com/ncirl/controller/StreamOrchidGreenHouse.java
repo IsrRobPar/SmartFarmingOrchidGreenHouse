@@ -76,8 +76,8 @@ public class StreamOrchidGreenHouse {
 
         StreamObserver<StreamTemperatureToFan> requestObserver = fanServiceStub.fanService(responseObserver);
 
-        final Random random2 = new Random();
-        int temperature = random2.nextInt(45-10+1)+10;
+        final Random random3 = new Random();
+        int temperature = random3.nextInt(45-10+1)+10;
 
         StreamTemperatureToFan request = StreamTemperatureToFan.newBuilder()
                 .setTemperature(temperature)

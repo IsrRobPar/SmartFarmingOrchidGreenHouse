@@ -116,7 +116,7 @@
       <recent name="Services" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.StreamOrchidGreenHouse">
+  <component name="RunManager">
     <configuration name="FanService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Services.FanService" />
       <module name="OrchidGreenHouse" />
