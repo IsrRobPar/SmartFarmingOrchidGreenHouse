@@ -13,7 +13,6 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.Properties;
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
 
 public class TemperatureSensor {
 
@@ -95,7 +94,6 @@ public class TemperatureSensor {
         System.out.println("Server registered to Consul successfully. Host: " + hostAddress);
     }
 
-
     public static void main(String[] args) throws IOException, InterruptedException {
         final TemperatureSensor server = new TemperatureSensor();
         server.start();
@@ -119,7 +117,7 @@ public class TemperatureSensor {
         public void streamCurrentTemperature(StreamTemperatureRequest request, StreamObserver<StreamTemperatureResponse> responseObserver) {
 
             final Random random = new Random();
-            int temperature = random.nextInt(100);
+            int temperature = random.nextInt(45-10+1)+10;
 
             Runnable streamingTask = () -> {
                 try {

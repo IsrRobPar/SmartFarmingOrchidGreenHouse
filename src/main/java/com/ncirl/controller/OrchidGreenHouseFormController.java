@@ -1,4 +1,4 @@
-package com.example.grpc.controller;
+package com.ncirl.controller;
 
 import com.example.grpc.fanService.FanServiceGrpc;
 import com.example.grpc.fanService.StreamFanStatus;
@@ -10,17 +10,30 @@ import com.example.grpc.temperatureSensor.*;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.stub.StreamObserver;
-
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
-
-public class OrchidGreenHouseController {
+public class OrchidGreenHouseFormController {
 
     //GUI
+    @FXML
+    public TextField nameTextField;
 
+    @FXML
+    public Button submitButton;
+
+    @FXML
+    void submitButtonClickOnAction(ActionEvent event) {
+        System.out.println("SubmitButtonClickOnAction clicked");
+        String name = nameTextField.getText();
+        System.out.println("nameTextField: " + name);
+    }
 
 
 
@@ -36,7 +49,7 @@ public class OrchidGreenHouseController {
     private final FanServiceGrpc.FanServiceStub fanServiceStub;
     private final RecordDataServiceGrpc.RecordDataServiceStub recordDataServiceStub;
 
-    public OrchidGreenHouseController(String host, int port) {
+    public OrchidGreenHouseFormController(String host, int port) {
         this.channel = ManagedChannelBuilder.forAddress(host, port)
                 .usePlaintext()
                 .build();
@@ -193,16 +206,15 @@ public class OrchidGreenHouseController {
 
     }
 
-
     public static void main(String[] args) {
-        OrchidGreenHouseController clientTemperatureSensor = new OrchidGreenHouseController("localhost", 28001);
+        OrchidGreenHouseFormController clientTemperatureSensor = new OrchidGreenHouseFormController("localhost", 28001);
         clientTemperatureSensor.getTemperatureConnection("Temperature Sensor");
         clientTemperatureSensor.streamCurrentTemperature();
 
-        OrchidGreenHouseController clientFanService = new OrchidGreenHouseController("localhost", 28100);
+        OrchidGreenHouseFormController clientFanService = new OrchidGreenHouseFormController("localhost", 28100);
         clientFanService.fanService();
 
-        OrchidGreenHouseController clientRecordDataService = new OrchidGreenHouseController("localhost", 28500);
+        OrchidGreenHouseFormController clientRecordDataService = new OrchidGreenHouseFormController("localhost", 28500);
         clientRecordDataService.recordDataService();
 
         Scanner scanner = new Scanner(System.in);
@@ -223,4 +235,5 @@ public class OrchidGreenHouseController {
             System.err.println("Error while shutting down client: " + e.getMessage());
         }
     }
+
 }
