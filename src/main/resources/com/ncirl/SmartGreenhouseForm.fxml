@@ -9,11 +9,10 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500" prefWidth="599.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ncirl.controller.SmartGreenHouseFormController">
     <children>
-      <ImageView fitHeight="91.0" fitWidth="285.0" layoutX="157.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@orchidLogo.png" />
-         </image>
-      </ImageView>
+        <ImageView fitHeight="91.0" fitWidth="285.0" layoutX="157.0" layoutY="14.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <Image url="@orchidLogo.png"/>
+        </ImageView>
       <ImageView fitHeight="99.0" fitWidth="109.0" layoutX="46.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@TempSensor.png" />
