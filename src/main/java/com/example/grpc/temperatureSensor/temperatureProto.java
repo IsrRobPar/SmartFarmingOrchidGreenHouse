@@ -44,23 +44,23 @@ public final class temperatureProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\027temperatureSensor.proto\022\"com.example.g" +
-      "rpc.temperatureSensor\"2\n\034TemperatureConn" +
-      "ectionRequest\022\022\n\nserverName\030\001 \001(\t\"0\n\035Tem" +
-      "peratureConnectionResponse\022\017\n\007message\030\001 " +
-      "\001(\t\"/\n\030StreamTemperatureRequest\022\023\n\013tempe" +
-      "rature\030\001 \001(\005\"A\n\031StreamTemperatureRespons" +
-      "e\022\017\n\007message\030\001 \001(\t\022\023\n\013temperature\030\002 \001(\0052" +
-      "\333\002\n\033TemperatureSensorConnection\022\237\001\n\030getT" +
-      "emperatureConnection\022@.com.example.grpc." +
-      "temperatureSensor.TemperatureConnectionR" +
-      "equest\032A.com.example.grpc.temperatureSen" +
-      "sor.TemperatureConnectionResponse\022\231\001\n\030st" +
-      "reamCurrentTemperature\022<.com.example.grp" +
-      "c.temperatureSensor.StreamTemperatureReq" +
-      "uest\032=.com.example.grpc.temperatureSenso" +
-      "r.StreamTemperatureResponse0\001B8\n\"com.exa" +
-      "mple.grpc.temperatureSensorB\020temperature" +
-      "ProtoP\001b\006proto3"
+      "rpc.temperatureSensor\"3\n\034TemperatureConn" +
+      "ectionRequest\022\023\n\013temperature\030\001 \001(\005\"0\n\035Te" +
+      "mperatureConnectionResponse\022\017\n\007message\030\001" +
+      " \001(\t\"/\n\030StreamTemperatureRequest\022\023\n\013temp" +
+      "erature\030\001 \001(\005\"A\n\031StreamTemperatureRespon" +
+      "se\022\017\n\007message\030\001 \001(\t\022\023\n\013temperature\030\002 \001(\005" +
+      "2\333\002\n\033TemperatureSensorConnection\022\237\001\n\030get" +
+      "TemperatureConnection\022@.com.example.grpc" +
+      ".temperatureSensor.TemperatureConnection" +
+      "Request\032A.com.example.grpc.temperatureSe" +
+      "nsor.TemperatureConnectionResponse\022\231\001\n\030s" +
+      "treamCurrentTemperature\022<.com.example.gr" +
+      "pc.temperatureSensor.StreamTemperatureRe" +
+      "quest\032=.com.example.grpc.temperatureSens" +
+      "or.StreamTemperatureResponse0\001B8\n\"com.ex" +
+      "ample.grpc.temperatureSensorB\020temperatur" +
+      "eProtoP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -79,7 +79,7 @@ public final class temperatureProto {
     internal_static_com_example_grpc_temperatureSensor_TemperatureConnectionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_example_grpc_temperatureSensor_TemperatureConnectionRequest_descriptor,
-        new java.lang.String[] { "ServerName", });
+        new java.lang.String[] { "Temperature", });
     internal_static_com_example_grpc_temperatureSensor_TemperatureConnectionResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_com_example_grpc_temperatureSensor_TemperatureConnectionResponse_fieldAccessorTable = new

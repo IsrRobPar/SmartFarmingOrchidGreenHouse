@@ -15,7 +15,7 @@ service TemperatureSensorConnection{
 }
 
 message TemperatureConnectionRequest {
-  string  serverName = 1;
+  int32 temperature = 1;
 }
 
 message TemperatureConnectionResponse {

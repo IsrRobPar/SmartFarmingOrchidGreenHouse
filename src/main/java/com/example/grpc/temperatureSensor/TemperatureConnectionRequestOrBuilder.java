@@ -8,12 +8,7 @@ public interface TemperatureConnectionRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string serverName = 1;</code>
+   * <code>int32 temperature = 1;</code>
    */
-  java.lang.String getServerName();
-  /**
-   * <code>string serverName = 1;</code>
-   */
-  com.google.protobuf.ByteString
-      getServerNameBytes();
+  int getTemperature();
 }

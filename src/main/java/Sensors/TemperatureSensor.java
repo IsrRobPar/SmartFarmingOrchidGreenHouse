@@ -104,8 +104,8 @@ public class TemperatureSensor {
 
         @Override
         public void getTemperatureConnection(TemperatureConnectionRequest request, StreamObserver<TemperatureConnectionResponse> responseObserver) {
-            String serverName = request.getServerName();
-            String message = " -- " + serverName + " -- ";
+            int temperature = request.getTemperature();
+            String message = " -- " + temperature + " -- ";
             TemperatureConnectionResponse response = TemperatureConnectionResponse.newBuilder()
                     .setMessage(message)
                     .build();
@@ -117,11 +117,11 @@ public class TemperatureSensor {
         public void streamCurrentTemperature(StreamTemperatureRequest request, StreamObserver<StreamTemperatureResponse> responseObserver) {
 
             final Random random = new Random();
-            int temperature = random.nextInt(45-10+1)+10;
 
             Runnable streamingTask = () -> {
                 try {
                     while (!Thread.currentThread().isInterrupted()) {
+                        int temperature = random.nextInt(45-10+1)+10;
                         String message = " is: " + temperature + "°C.";
                         StreamTemperatureResponse response = StreamTemperatureResponse.newBuilder()
                                 .setMessage(message)

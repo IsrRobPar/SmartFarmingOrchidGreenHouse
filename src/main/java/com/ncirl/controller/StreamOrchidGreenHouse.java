@@ -19,7 +19,7 @@ import java.util.Scanner;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
-public class OrchidGreenHouseFormController {
+public class StreamOrchidGreenHouse {
 
     //GUI
     @FXML
@@ -49,7 +49,7 @@ public class OrchidGreenHouseFormController {
     private final FanServiceGrpc.FanServiceStub fanServiceStub;
     private final RecordDataServiceGrpc.RecordDataServiceStub recordDataServiceStub;
 
-    public OrchidGreenHouseFormController(String host, int port) {
+    public StreamOrchidGreenHouse(String host, int port) {
         this.channel = ManagedChannelBuilder.forAddress(host, port)
                 .usePlaintext()
                 .build();
@@ -59,9 +59,9 @@ public class OrchidGreenHouseFormController {
     }
 
     //TEMPERATURE SENSOR (SERVER-SIDE STREAMING GRPC)
-    public void getTemperatureConnection(String serverName) {
+    public void getTemperatureConnection(int temperature) {
         TemperatureConnectionRequest request = TemperatureConnectionRequest.newBuilder()
-                .setServerName(serverName)
+                .setTemperature(temperature)
                 .build();
 
         temperatureSensorStub.getTemperatureConnection(request, new StreamObserver<TemperatureConnectionResponse>() {
@@ -207,14 +207,14 @@ public class OrchidGreenHouseFormController {
     }
 
     public static void main(String[] args) {
-        OrchidGreenHouseFormController clientTemperatureSensor = new OrchidGreenHouseFormController("localhost", 28001);
-        clientTemperatureSensor.getTemperatureConnection("Temperature Sensor");
+        StreamOrchidGreenHouse clientTemperatureSensor = new StreamOrchidGreenHouse("localhost", 28001);
+        clientTemperatureSensor.getTemperatureConnection(0);
         clientTemperatureSensor.streamCurrentTemperature();
 
-        OrchidGreenHouseFormController clientFanService = new OrchidGreenHouseFormController("localhost", 28100);
+        StreamOrchidGreenHouse clientFanService = new StreamOrchidGreenHouse("localhost", 28100);
         clientFanService.fanService();
 
-        OrchidGreenHouseFormController clientRecordDataService = new OrchidGreenHouseFormController("localhost", 28500);
+        StreamOrchidGreenHouse clientRecordDataService = new StreamOrchidGreenHouse("localhost", 28500);
         clientRecordDataService.recordDataService();
 
         Scanner scanner = new Scanner(System.in);
