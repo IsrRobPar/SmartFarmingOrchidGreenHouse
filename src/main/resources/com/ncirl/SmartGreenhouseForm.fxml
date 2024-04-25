@@ -7,55 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="599.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ncirl.controller.SmartGreenHouseFormController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="Infinity" prefWidth="599.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ncirl.controller.SmartGreenHouseFormController">
    <children>
-      <Label layoutX="229.0" layoutY="96.0" prefHeight="36.0" prefWidth="141.0" text="------ SENSORS  ------">
-         <font>
-            <Font name="Calibri Bold" size="16.0" />
-         </font></Label>
-      <Button fx:id="submitButton" layoutX="170.0" layoutY="261.0" mnemonicParsing="false" onAction="#submitButtonClickOnAction" prefHeight="24.0" prefWidth="94.0" text="SOIL">
-         <font>
-            <Font name="Berlin Sans FB Demi Bold" size="11.0" />
-         </font></Button>
-      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="45.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@SensorTemp.png" />
-         </image>
-      </ImageView>
-      <Button fx:id="submitButton1" layoutX="170.0" layoutY="132.0" mnemonicParsing="false" onAction="#submitButtonClickOnAction" prefHeight="24.0" prefWidth="94.0" text="TEMPERATURE">
-         <font>
-            <Font name="Berlin Sans FB Demi Bold" size="11.0" />
-         </font>
-      </Button>
-      <ImageView fitHeight="87.0" fitWidth="237.0" layoutX="170.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Orchid.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="45.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@SensorSoil.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="320.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@SensorAir.png" />
-         </image>
-      </ImageView>
-      <Button fx:id="submitButton11" layoutX="445.0" layoutY="132.0" mnemonicParsing="false" onAction="#submitButtonClickOnAction" prefHeight="24.0" prefWidth="94.0" text="AIR">
-         <font>
-            <Font name="Berlin Sans FB Demi Bold" size="11.0" />
-         </font>
-      </Button>
-      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="320.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@SensorLigth.png" />
-         </image>
-      </ImageView>
-      <Button fx:id="submitButton111" layoutX="445.0" layoutY="261.0" mnemonicParsing="false" onAction="#submitButtonClickOnAction" prefHeight="24.0" prefWidth="94.0" text="LIGTH">
-         <font>
-            <Font name="Berlin Sans FB Demi Bold" size="11.0" />
-         </font>
-      </Button>
+      <Button layoutX="75.0" layoutY="50.0" mnemonicParsing="false" text="Atualizar" onAction="#updateTemperature"/>
+      <Label layoutX="75.0" layoutY="100.0" prefHeight="17.0" prefWidth="200.0" text="Temperatura: " fx:id="temperaturaLabel"/>
    </children>
 </AnchorPane>

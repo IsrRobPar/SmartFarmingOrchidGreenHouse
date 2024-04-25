@@ -7,18 +7,9 @@
     <list default="true" id="1bbd2568-0184-47c8-810c-e60558882b9f" name="Changes" comment="CONSUL SERVER REGISTER">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Sensors/TemperatureSensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sensors/TemperatureSensor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/StreamTemperatureRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/StreamTemperatureRequestOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/StreamTemperatureResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/StreamTemperatureResponseOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/TemperatureConnectionRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/TemperatureConnectionRequestOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/TemperatureConnectionResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/TemperatureConnectionResponseOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/TemperatureSensorConnectionGrpc.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grpc/temperatureSensor/temperatureProto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ncirl/controller/OrchidGreenHouseFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ncirl/controller/StreamOrchidGreenHouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/proto/sensors/temperatureSensor.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/sensors/temperatureSensor.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ncirl/controller/SmartGreenHouseFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ncirl/controller/SmartGreenHouseFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ncirl/controller/StreamOrchidGreenHouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ncirl/controller/StreamOrchidGreenHouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/ncirl/SmartGreenhouseForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/ncirl/SmartGreenhouseForm.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,15 +219,7 @@
       <workItem from="1713952519608" duration="2059000" />
       <workItem from="1713956618300" duration="9665000" />
       <workItem from="1713968836179" duration="11947000" />
-      <workItem from="1714038596077" duration="7374000" />
-    </task>
-    <task id="LOCAL-00005" summary="PROTO temperatureSensor.proto">
-      <option name="closed" value="true" />
-      <created>1713462446861</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1713462446861</updated>
+      <workItem from="1714038596077" duration="15377000" />
     </task>
     <task id="LOCAL-00006" summary="SERVER HumidityServer">
       <option name="closed" value="true" />
@@ -622,7 +605,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714046847295</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="CONSUL SERVER REGISTER">
+      <option name="closed" value="true" />
+      <created>1714050364151</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1714050364151</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -10,39 +10,12 @@ import com.example.grpc.temperatureSensor.*;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.stub.StreamObserver;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
 public class StreamOrchidGreenHouse {
-
-    //GUI
-    @FXML
-    public TextField nameTextField;
-
-    @FXML
-    public Button submitButton;
-
-    @FXML
-    void submitButtonClickOnAction(ActionEvent event) {
-        System.out.println("SubmitButtonClickOnAction clicked");
-        String name = nameTextField.getText();
-        System.out.println("nameTextField: " + name);
-    }
-
-
-
-
-
-
-
-
-
 
     private final ManagedChannel channel;
     private final TemperatureSensorConnectionGrpc.TemperatureSensorConnectionStub temperatureSensorStub;
@@ -59,29 +32,6 @@ public class StreamOrchidGreenHouse {
     }
 
     //TEMPERATURE SENSOR (SERVER-SIDE STREAMING GRPC)
-    public void getTemperatureConnection(int temperature) {
-        TemperatureConnectionRequest request = TemperatureConnectionRequest.newBuilder()
-                .setTemperature(temperature)
-                .build();
-
-        temperatureSensorStub.getTemperatureConnection(request, new StreamObserver<TemperatureConnectionResponse>() {
-            @Override
-            public void onNext(TemperatureConnectionResponse response) {
-                System.out.println(response.getMessage());
-            }
-
-            @Override
-            public void onError(Throwable t) {
-                System.err.println("Error in unary request: " + t.getMessage());
-            }
-
-            @Override
-            public void onCompleted() {
-                System.out.println("Temperature Sensor request completed");
-            }
-        });
-    }
-
     public void streamCurrentTemperature() {
         StreamObserver<StreamTemperatureResponse> responseObserver = new StreamObserver<StreamTemperatureResponse>() {
 
@@ -208,7 +158,7 @@ public class StreamOrchidGreenHouse {
 
     public static void main(String[] args) {
         StreamOrchidGreenHouse clientTemperatureSensor = new StreamOrchidGreenHouse("localhost", 28001);
-        clientTemperatureSensor.getTemperatureConnection(0);
+
         clientTemperatureSensor.streamCurrentTemperature();
 
         StreamOrchidGreenHouse clientFanService = new StreamOrchidGreenHouse("localhost", 28100);

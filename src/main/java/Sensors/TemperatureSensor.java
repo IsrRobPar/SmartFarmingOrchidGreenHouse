@@ -104,8 +104,9 @@ public class TemperatureSensor {
 
         @Override
         public void getTemperatureConnection(TemperatureConnectionRequest request, StreamObserver<TemperatureConnectionResponse> responseObserver) {
-            int temperature = request.getTemperature();
-            String message = " -- " + temperature + " -- ";
+            final Random random2 = new Random();
+            int temperature = random2.nextInt(45-10+1)+10;
+            String message = String.valueOf(temperature);
             TemperatureConnectionResponse response = TemperatureConnectionResponse.newBuilder()
                     .setMessage(message)
                     .build();
