@@ -39,7 +39,7 @@ public class SmartGreenHouseFormController {
         try {
             response = UnaryTemperatureSensorStub.getTemperatureConnection(request);
             System.out.println(response.getMessage());
-            temperatureLabel.setText("Temperature: " + response.getMessage() + " °C");
+            temperatureLabel.setText(response.getMessage() + "°C");
         } catch (Exception e) {
             System.err.println("Error in unary request: " + e.getMessage());
         }
