@@ -17,7 +17,7 @@ public class SmartGreenHouseFormController {
     private final TemperatureSensorConnectionGrpc.TemperatureSensorConnectionBlockingStub UnaryTemperatureSensorStub;
 
     @FXML
-    private Label temperaturaLabel;
+    private Label temperatureLabel;
 
     public SmartGreenHouseFormController() {
         this.UnaryTemperatureChannel = ManagedChannelBuilder.forAddress("localhost", 28001)
@@ -39,7 +39,7 @@ public class SmartGreenHouseFormController {
         try {
             response = UnaryTemperatureSensorStub.getTemperatureConnection(request);
             System.out.println(response.getMessage());
-            temperaturaLabel.setText("Temperatura: " + response.getMessage() + " °C");
+            temperatureLabel.setText("Temperature: " + response.getMessage() + " °C");
         } catch (Exception e) {
             System.err.println("Error in unary request: " + e.getMessage());
         }

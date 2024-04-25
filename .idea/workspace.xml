@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1bbd2568-0184-47c8-810c-e60558882b9f" name="Changes" comment="GUI - WORKING \o/\o/\o/">
+    <list default="true" id="1bbd2568-0184-47c8-810c-e60558882b9f" name="Changes" comment="update errors">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/ncirl/GreenHouseForm.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/RecordDataSensors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/RecordDataSensors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/FanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/FanService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ncirl/controller/SmartGreenHouseFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ncirl/controller/SmartGreenHouseFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ncirl/controller/StreamOrchidGreenHouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ncirl/controller/StreamOrchidGreenHouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/ncirl/Orchid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/ncirl/SensorAir.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/ncirl/SensorLigth.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/ncirl/SensorSoil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/ncirl/SensorTemp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/ncirl/SmartGreenhouseForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/ncirl/SmartGreenhouseForm.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -219,23 +223,7 @@
       <workItem from="1713952519608" duration="2059000" />
       <workItem from="1713956618300" duration="9665000" />
       <workItem from="1713968836179" duration="11947000" />
-      <workItem from="1714038596077" duration="17447000" />
-    </task>
-    <task id="LOCAL-00007" summary="SERVER HumidityServer">
-      <option name="closed" value="true" />
-      <created>1713466226279</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1713466226279</updated>
-    </task>
-    <task id="LOCAL-00008" summary="SERVER HumidityServer">
-      <option name="closed" value="true" />
-      <created>1713466232205</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1713466232205</updated>
+      <workItem from="1714038596077" duration="19575000" />
     </task>
     <task id="LOCAL-00009" summary="SERVER HumidityServer">
       <option name="closed" value="true" />
@@ -613,7 +601,23 @@
       <option name="project" value="LOCAL" />
       <updated>1714057586143</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="update errors">
+      <option name="closed" value="true" />
+      <created>1714059273347</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1714059273347</updated>
+    </task>
+    <task id="LOCAL-00057" summary="update errors">
+      <option name="closed" value="true" />
+      <created>1714059521508</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1714059521508</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -631,7 +635,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="TEMPERATUR update veriables" />
     <MESSAGE value="update Humidity" />
     <MESSAGE value="FAN Update (PROTO)" />
     <MESSAGE value="FAN Update (SERVER)" />
@@ -656,7 +659,8 @@
     <MESSAGE value="UPDATE" />
     <MESSAGE value="CONSUL SERVER REGISTER" />
     <MESSAGE value="GUI - WORKING \o/\o/\o/" />
-    <option name="LAST_COMMIT_MESSAGE" value="GUI - WORKING \o/\o/\o/" />
+    <MESSAGE value="update errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="update errors" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
