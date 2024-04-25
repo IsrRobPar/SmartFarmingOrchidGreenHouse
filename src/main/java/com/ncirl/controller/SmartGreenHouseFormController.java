@@ -1,3 +1,4 @@
+
 package com.ncirl.controller;
 
 import com.example.grpc.temperatureSensor.TemperatureConnectionRequest;
@@ -9,7 +10,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.event.ActionEvent;
 
-import java.util.concurrent.TimeUnit;
 
 public class SmartGreenHouseFormController {
 
@@ -51,7 +51,4 @@ public class SmartGreenHouseFormController {
         getTemperatureConnection();
     }
 
-    public void shutdown() throws InterruptedException {
-        UnaryTemperatureChannel.shutdown().awaitTermination(5, TimeUnit.SECONDS);
-    }
 }
