@@ -6,7 +6,6 @@ import com.example.grpc.temperatureSensor.*;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.InetAddress;
