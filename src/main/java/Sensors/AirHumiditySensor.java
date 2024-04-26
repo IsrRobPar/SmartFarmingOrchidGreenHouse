@@ -127,7 +127,7 @@ public class AirHumiditySensor {
                                 .setMessage(message)
                                 .build();
                         responseObserver.onNext(response);
-                        Thread.sleep(60000); // Stream every 1 minute
+                        Thread.sleep(30000); // Stream every 30 seconds
                     }
                 } catch (InterruptedException e) {
                     Thread.currentThread().interrupt();

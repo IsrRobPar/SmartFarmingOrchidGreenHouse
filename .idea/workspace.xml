@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1bbd2568-0184-47c8-810c-e60558882b9f" name="Changes" comment="GUI UPDATE">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Sensors/AirHumiditySensor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/proto/sensors/airHumiditySensor.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/consul/airHumiditySensor.consul.properties" afterDir="false" />
+    <list default="true" id="1bbd2568-0184-47c8-810c-e60558882b9f" name="Changes" comment="gui update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sensors/AirHumiditySensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sensors/AirHumiditySensor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Sensors/TemperatureSensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sensors/TemperatureSensor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ncirl/controller/SmartGreenHouseFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ncirl/controller/SmartGreenHouseFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ncirl/controller/StreamOrchidGreenHouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ncirl/controller/StreamOrchidGreenHouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/ncirl/SmartGreenhouseForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/ncirl/SmartGreenhouseForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/FanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/FanService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +116,7 @@
       <recent name="Services" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.StreamOrchidGreenHouse">
     <configuration name="AirHumiditySensor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Sensors.AirHumiditySensor" />
       <module name="OrchidGreenHouse" />
@@ -188,11 +184,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FanService" />
-        <item itemvalue="Application.RecordDataSensors" />
         <item itemvalue="Application.StreamOrchidGreenHouse" />
-        <item itemvalue="Application.TemperatureSensor" />
+        <item itemvalue="Application.FanService" />
         <item itemvalue="Application.AirHumiditySensor" />
+        <item itemvalue="Application.TemperatureSensor" />
+        <item itemvalue="Application.RecordDataSensors" />
       </list>
     </recent_temporary>
   </component>
@@ -226,47 +222,7 @@
       <workItem from="1714038596077" duration="19879000" />
       <workItem from="1714062069732" duration="1583000" />
       <workItem from="1714117890389" duration="9532000" />
-      <workItem from="1714139189018" duration="3779000" />
-    </task>
-    <task id="LOCAL-00015" summary="update Humidity">
-      <option name="closed" value="true" />
-      <created>1713522915636</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1713522915636</updated>
-    </task>
-    <task id="LOCAL-00016" summary="FAN Update (PROTO)">
-      <option name="closed" value="true" />
-      <created>1713525715013</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1713525715013</updated>
-    </task>
-    <task id="LOCAL-00017" summary="FAN Update (SERVER)">
-      <option name="closed" value="true" />
-      <created>1713525737185</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1713525737185</updated>
-    </task>
-    <task id="LOCAL-00018" summary="update">
-      <option name="closed" value="true" />
-      <created>1713530294022</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1713530294022</updated>
-    </task>
-    <task id="LOCAL-00019" summary="update">
-      <option name="closed" value="true" />
-      <created>1713530304951</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1713530304951</updated>
+      <workItem from="1714139189018" duration="4230000" />
     </task>
     <task id="LOCAL-00020" summary="FAN UPDATE">
       <option name="closed" value="true" />
@@ -620,7 +576,47 @@
       <option name="project" value="LOCAL" />
       <updated>1714123483151</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Air Sensor">
+      <option name="closed" value="true" />
+      <created>1714143149528</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1714143149529</updated>
+    </task>
+    <task id="LOCAL-00065" summary="TemperatureSensor update">
+      <option name="closed" value="true" />
+      <created>1714143175840</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1714143175840</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Clients update">
+      <option name="closed" value="true" />
+      <created>1714143192385</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1714143192385</updated>
+    </task>
+    <task id="LOCAL-00067" summary="gui update">
+      <option name="closed" value="true" />
+      <created>1714143205147</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1714143205147</updated>
+    </task>
+    <task id="LOCAL-00068" summary="gui update">
+      <option name="closed" value="true" />
+      <created>1714143211323</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1714143211323</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -638,10 +634,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="FAN Update (PROTO)" />
-    <MESSAGE value="FAN Update (SERVER)" />
-    <MESSAGE value="update" />
-    <MESSAGE value="FAN UPDATE" />
     <MESSAGE value="Client update" />
     <MESSAGE value="POM Dependencies update - JFX" />
     <MESSAGE value="CONSUL SERVER HumiditySensorServer" />
@@ -663,7 +655,11 @@
     <MESSAGE value="GUI - WORKING \o/\o/\o/" />
     <MESSAGE value="update errors" />
     <MESSAGE value="GUI UPDATE" />
-    <option name="LAST_COMMIT_MESSAGE" value="GUI UPDATE" />
+    <MESSAGE value="Air Sensor" />
+    <MESSAGE value="TemperatureSensor update" />
+    <MESSAGE value="Clients update" />
+    <MESSAGE value="gui update" />
+    <option name="LAST_COMMIT_MESSAGE" value="gui update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -81,8 +81,7 @@ public class StreamOrchidGreenHouse {
         StreamObserver<StreamFanStatus> responseObserver = new StreamObserver<StreamFanStatus>() {
             @Override
             public void onNext(StreamFanStatus value) {
-                System.out.println("-----------------------------------" +
-                                  "\nFAN status: " + value.getMessage());
+                System.out.println("FAN status: " + value.getMessage());
             }
 
             @Override
@@ -105,7 +104,7 @@ public class StreamOrchidGreenHouse {
                 .setTemperature(temperature)
                 .build();
 
-        System.out.println("Sending temperature: " + temperature);
+        System.out.println("Sending temperature to the fan: " + temperature);
         requestObserver.onNext(request);
     }
 

@@ -128,7 +128,7 @@ public class FanService{
                                         .build();
 
                                 responseObserver.onNext(response);
-                                Thread.sleep(10000); // Stream every 10 seconds
+                                Thread.sleep(30000); // Stream every 30 seconds
                             }
                         } catch (InterruptedException e) {
                             Thread.currentThread().interrupt();
