@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1bbd2568-0184-47c8-810c-e60558882b9f" name="Changes" comment="GUI UPDATE" />
+    <list default="true" id="1bbd2568-0184-47c8-810c-e60558882b9f" name="Changes" comment="GUI UPDATE">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -110,7 +112,7 @@
       <recent name="Services" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.StreamOrchidGreenHouse">
+  <component name="RunManager" selected="Application.Launcher">
     <configuration name="FanService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Services.FanService" />
       <module name="OrchidGreenHouse" />
@@ -178,10 +180,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.StreamOrchidGreenHouse" />
-        <item itemvalue="Application.RecordDataSensors" />
         <item itemvalue="Application.Launcher" />
         <item itemvalue="Application.TemperatureSensor" />
+        <item itemvalue="Application.StreamOrchidGreenHouse" />
+        <item itemvalue="Application.RecordDataSensors" />
         <item itemvalue="Application.FanService" />
       </list>
     </recent_temporary>
@@ -215,14 +217,7 @@
       <workItem from="1713968836179" duration="11947000" />
       <workItem from="1714038596077" duration="19879000" />
       <workItem from="1714062069732" duration="1583000" />
-    </task>
-    <task id="LOCAL-00013" summary="PROTO fanStatus.proto">
-      <option name="closed" value="true" />
-      <created>1713520547377</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1713520547377</updated>
+      <workItem from="1714117890389" duration="3781000" />
     </task>
     <task id="LOCAL-00014" summary="TEMPERATUR update veriables">
       <option name="closed" value="true" />
@@ -608,7 +603,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714064591396</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="GUI UPDATE">
+      <option name="closed" value="true" />
+      <created>1714117901712</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1714117901712</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
