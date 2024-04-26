@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bbd2568-0184-47c8-810c-e60558882b9f" name="Changes" comment="GUI UPDATE">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Sensors/AirHumiditySensor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/proto/sensors/airHumiditySensor.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/consul/airHumiditySensor.consul.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sensors/TemperatureSensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sensors/TemperatureSensor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ncirl/controller/SmartGreenHouseFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ncirl/controller/SmartGreenHouseFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ncirl/controller/StreamOrchidGreenHouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ncirl/controller/StreamOrchidGreenHouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/ncirl/SmartGreenhouseForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/ncirl/SmartGreenhouseForm.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -32,7 +39,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/IsrRobPar/OrchidGreenHouse.git&quot;,
+    &quot;url&quot;: &quot;https://github.com/IsrRobPar/SmartFarmingOrchidGreenHouse.git&quot;,
     &quot;accountId&quot;: &quot;4ba83d69-f9c0-4b03-aed2-0af41949ae71&quot;
   }
 }</component>
@@ -51,40 +58,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.FanService.executor&quot;: &quot;Run&quot;,
-    &quot;Application.FanStatusServer.executor&quot;: &quot;Run&quot;,
-    &quot;Application.GreenHouseApp.executor&quot;: &quot;Run&quot;,
-    &quot;Application.GreenHouseClient.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HumiditySensorServer.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Launcher.executor&quot;: &quot;Run&quot;,
-    &quot;Application.OrchidGreenHouseController.executor&quot;: &quot;Run&quot;,
-    &quot;Application.OrchidGreenHouseFormController.executor&quot;: &quot;Run&quot;,
-    &quot;Application.RecordData.executor&quot;: &quot;Run&quot;,
-    &quot;Application.RecordDataSensors.executor&quot;: &quot;Run&quot;,
-    &quot;Application.StreamOrchidGreenHouse.executor&quot;: &quot;Run&quot;,
-    &quot;Application.TemperatureSensor.executor&quot;: &quot;Run&quot;,
-    &quot;Application.TemperatureSensorServer.executor&quot;: &quot;Run&quot;,
-    &quot;Application.com.example.grpc.Launcher.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/NCI/DistributedSystem/CA/OrchidGreenHouseV6&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.AirHumiditySensor.executor": "Run",
+    "Application.FanService.executor": "Run",
+    "Application.FanStatusServer.executor": "Run",
+    "Application.GreenHouseApp.executor": "Run",
+    "Application.GreenHouseClient.executor": "Run",
+    "Application.HumiditySensorServer.executor": "Run",
+    "Application.Launcher.executor": "Run",
+    "Application.OrchidGreenHouseController.executor": "Run",
+    "Application.OrchidGreenHouseFormController.executor": "Run",
+    "Application.RecordData.executor": "Run",
+    "Application.RecordDataSensors.executor": "Run",
+    "Application.StreamOrchidGreenHouse.executor": "Run",
+    "Application.TemperatureSensor.executor": "Run",
+    "Application.TemperatureSensorServer.executor": "Run",
+    "Application.com.example.grpc.Launcher.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/NCI/DistributedSystem/CA/OrchidGreenHouseV6",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.JavaFX",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\NCI\DistributedSystem\CA_DistribuitedSystems\OrchidGreenHouse\src\main\java\Services" />
@@ -112,13 +120,13 @@
       <recent name="Services" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Launcher">
-    <configuration name="FanService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Services.FanService" />
+  <component name="RunManager">
+    <configuration name="AirHumiditySensor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Sensors.AirHumiditySensor" />
       <module name="OrchidGreenHouse" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Services.*" />
+          <option name="PATTERN" value="Sensors.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -126,12 +134,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Launcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ncirl.Launcher" />
+    <configuration name="FanService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Services.FanService" />
       <module name="OrchidGreenHouse" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ncirl.*" />
+          <option name="PATTERN" value="Services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -180,11 +188,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Launcher" />
-        <item itemvalue="Application.TemperatureSensor" />
-        <item itemvalue="Application.StreamOrchidGreenHouse" />
-        <item itemvalue="Application.RecordDataSensors" />
         <item itemvalue="Application.FanService" />
+        <item itemvalue="Application.RecordDataSensors" />
+        <item itemvalue="Application.StreamOrchidGreenHouse" />
+        <item itemvalue="Application.TemperatureSensor" />
+        <item itemvalue="Application.AirHumiditySensor" />
       </list>
     </recent_temporary>
   </component>
@@ -217,15 +225,8 @@
       <workItem from="1713968836179" duration="11947000" />
       <workItem from="1714038596077" duration="19879000" />
       <workItem from="1714062069732" duration="1583000" />
-      <workItem from="1714117890389" duration="3781000" />
-    </task>
-    <task id="LOCAL-00014" summary="TEMPERATUR update veriables">
-      <option name="closed" value="true" />
-      <created>1713522800579</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1713522800579</updated>
+      <workItem from="1714117890389" duration="9532000" />
+      <workItem from="1714139189018" duration="3779000" />
     </task>
     <task id="LOCAL-00015" summary="update Humidity">
       <option name="closed" value="true" />
@@ -611,7 +612,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714117901712</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="GUI UPDATE">
+      <option name="closed" value="true" />
+      <created>1714123483151</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1714123483151</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -668,6 +677,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/FanStatusServer.java</url>
           <line>19</line>
           <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Sensors/TemperatureSensor.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/GreenHouseClient.java</url>
