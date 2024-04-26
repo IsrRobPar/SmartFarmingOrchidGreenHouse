@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1bbd2568-0184-47c8-810c-e60558882b9f" name="Changes" comment="update errors">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ncirl/controller/SmartGreenHouseFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ncirl/controller/SmartGreenHouseFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/ncirl/SmartGreenhouseForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/ncirl/SmartGreenhouseForm.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="1bbd2568-0184-47c8-810c-e60558882b9f" name="Changes" comment="GUI UPDATE" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -219,23 +214,7 @@
       <workItem from="1713956618300" duration="9665000" />
       <workItem from="1713968836179" duration="11947000" />
       <workItem from="1714038596077" duration="19879000" />
-      <workItem from="1714062069732" duration="707000" />
-    </task>
-    <task id="LOCAL-00011" summary="SERVER TemperatureSensorServer">
-      <option name="closed" value="true" />
-      <created>1713518797289</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1713518797289</updated>
-    </task>
-    <task id="LOCAL-00012" summary="SERVER HumiditySensorServer">
-      <option name="closed" value="true" />
-      <created>1713518933949</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1713518933949</updated>
+      <workItem from="1714062069732" duration="1583000" />
     </task>
     <task id="LOCAL-00013" summary="PROTO fanStatus.proto">
       <option name="closed" value="true" />
@@ -613,7 +592,23 @@
       <option name="project" value="LOCAL" />
       <updated>1714061612517</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="GUI UPDATE">
+      <option name="closed" value="true" />
+      <created>1714063015888</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1714063015888</updated>
+    </task>
+    <task id="LOCAL-00061" summary="GUI UPDATE">
+      <option name="closed" value="true" />
+      <created>1714064591396</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1714064591396</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -631,7 +626,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update Humidity" />
     <MESSAGE value="FAN Update (PROTO)" />
     <MESSAGE value="FAN Update (SERVER)" />
     <MESSAGE value="update" />
@@ -656,7 +650,8 @@
     <MESSAGE value="CONSUL SERVER REGISTER" />
     <MESSAGE value="GUI - WORKING \o/\o/\o/" />
     <MESSAGE value="update errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="update errors" />
+    <MESSAGE value="GUI UPDATE" />
+    <option name="LAST_COMMIT_MESSAGE" value="GUI UPDATE" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
