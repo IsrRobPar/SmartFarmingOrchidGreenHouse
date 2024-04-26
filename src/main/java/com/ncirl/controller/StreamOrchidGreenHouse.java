@@ -1,11 +1,8 @@
 package com.ncirl.controller;
 
-import com.example.grpc.fanService.FanServiceGrpc;
-import com.example.grpc.fanService.StreamFanStatus;
-import com.example.grpc.fanService.StreamTemperatureToFan;
-import com.example.grpc.recordDataService.RecordDataServiceGrpc;
-import com.example.grpc.recordDataService.RecordSensorDataRequest;
-import com.example.grpc.recordDataService.RecordSensorDataResponse;
+import com.example.grpc.airHumiditySensor.*;
+import com.example.grpc.fanService.*;
+import com.example.grpc.recordDataService.*;
 import com.example.grpc.temperatureSensor.*;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
@@ -19,6 +16,7 @@ public class StreamOrchidGreenHouse {
 
     private final ManagedChannel channel;
     private final TemperatureSensorConnectionGrpc.TemperatureSensorConnectionStub temperatureSensorStub;
+    private final AirHumiditySensorConnectionGrpc.AirHumiditySensorConnectionStub airHumiditySensorStub;
     private final FanServiceGrpc.FanServiceStub fanServiceStub;
     private final RecordDataServiceGrpc.RecordDataServiceStub recordDataServiceStub;
 
@@ -29,6 +27,7 @@ public class StreamOrchidGreenHouse {
         this.temperatureSensorStub = TemperatureSensorConnectionGrpc.newStub(channel);
         this.fanServiceStub = FanServiceGrpc.newStub(channel);
         this.recordDataServiceStub = RecordDataServiceGrpc.newStub(channel);
+        this.airHumiditySensorStub = AirHumiditySensorConnectionGrpc.newStub(channel);
     }
 
     //TEMPERATURE SENSOR (SERVER-SIDE STREAMING GRPC)
@@ -52,6 +51,29 @@ public class StreamOrchidGreenHouse {
         };
 
         temperatureSensorStub.streamCurrentTemperature(StreamTemperatureRequest.newBuilder().setTemperature(0).build(), responseObserver);
+    }
+
+    //TEMPERATURE SENSOR (SERVER-SIDE STREAMING GRPC)
+    public void streamCurrentAirHumidity() {
+        StreamObserver<StreamAirHumidityResponse> responseObserver = new StreamObserver<StreamAirHumidityResponse>() {
+
+            @Override
+            public void onNext(StreamAirHumidityResponse response) {
+                System.out.println("AIR HUMIDITY streaming " + response.getMessage());
+            }
+
+            @Override
+            public void onError(Throwable t) {
+                System.err.println("Error in server streaming: " + t.getMessage());
+            }
+
+            @Override
+            public void onCompleted() {
+                System.out.println("Server streaming completed");
+            }
+        };
+
+        airHumiditySensorStub.streamCurrentAirHumidity(StreamAirHumidityRequest.newBuilder().setAirHumidity(0).build(), responseObserver);
     }
 
     //FAN SERVICE (BIDIRECTIONAL STREAMING GRPC)
@@ -159,6 +181,9 @@ public class StreamOrchidGreenHouse {
     public static void main(String[] args) {
         StreamOrchidGreenHouse clientTemperatureSensor = new StreamOrchidGreenHouse("localhost", 28001);
         clientTemperatureSensor.streamCurrentTemperature();
+
+        StreamOrchidGreenHouse clientAirHumidityService = new StreamOrchidGreenHouse("localhost", 28002);
+        clientAirHumidityService.streamCurrentAirHumidity();
 
         StreamOrchidGreenHouse clientFanService = new StreamOrchidGreenHouse("localhost", 28100);
         clientFanService.fanService();
