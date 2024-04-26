@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1bbd2568-0184-47c8-810c-e60558882b9f" name="Changes" comment="gui update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sensors/AirHumiditySensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sensors/AirHumiditySensor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sensors/TemperatureSensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sensors/TemperatureSensor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/FanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/FanService.java" afterDir="false" />
-    </list>
+    <list default="true" id="1bbd2568-0184-47c8-810c-e60558882b9f" name="Changes" comment="update time streaming" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,7 +62,7 @@
     "Application.OrchidGreenHouseFormController.executor": "Run",
     "Application.RecordData.executor": "Run",
     "Application.RecordDataSensors.executor": "Run",
-    "Application.StreamOrchidGreenHouse.executor": "Run",
+    "Application.StreamOrchidGreenHouse.executor": "Debug",
     "Application.TemperatureSensor.executor": "Run",
     "Application.TemperatureSensorServer.executor": "Run",
     "Application.com.example.grpc.Launcher.executor": "Run",
@@ -222,15 +217,7 @@
       <workItem from="1714038596077" duration="19879000" />
       <workItem from="1714062069732" duration="1583000" />
       <workItem from="1714117890389" duration="9532000" />
-      <workItem from="1714139189018" duration="4230000" />
-    </task>
-    <task id="LOCAL-00020" summary="FAN UPDATE">
-      <option name="closed" value="true" />
-      <created>1713533433605</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1713533433605</updated>
+      <workItem from="1714139189018" duration="4607000" />
     </task>
     <task id="LOCAL-00021" summary="FAN UPDATE">
       <option name="closed" value="true" />
@@ -616,7 +603,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714143211323</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="update time streaming">
+      <option name="closed" value="true" />
+      <created>1714143824841</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1714143824841</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -634,7 +629,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Client update" />
     <MESSAGE value="POM Dependencies update - JFX" />
     <MESSAGE value="CONSUL SERVER HumiditySensorServer" />
     <MESSAGE value="CONSUL SERVER TemperatureSensorServer" />
@@ -659,7 +653,8 @@
     <MESSAGE value="TemperatureSensor update" />
     <MESSAGE value="Clients update" />
     <MESSAGE value="gui update" />
-    <option name="LAST_COMMIT_MESSAGE" value="gui update" />
+    <MESSAGE value="update time streaming" />
+    <option name="LAST_COMMIT_MESSAGE" value="update time streaming" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
